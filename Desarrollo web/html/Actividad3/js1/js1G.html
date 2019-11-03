@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+	<script>
+		function Saludar(i){
+			alert(i)
+		}
+		sCadena= "<table border=1>";
+        for(i=0;i<=4;i++){
+            sCadena+= "<tr>";
+                for(x=0;x<=4;x++){
+                    sCadena+="<td><button onclick=\"Saludar(" + i + ")\">PLAIAUNDI</button></td>";
+                }
+            sCadena+= "</tr>";
+        }
+        sCadena+="</table>";
+        document.write(sCadena);
+	</script>
+	</table>
+</body>
+</html>
+

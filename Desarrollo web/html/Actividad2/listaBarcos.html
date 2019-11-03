@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body id="tablaBarcos">
+	<h1>BARCOS</h1>
+<table style="width:80%;
+        margin-left:auto;
+        margin-right:auto;">
+	<tr>
+		<td class="tableIndex"> <img src="Barcos/ColorBajo/535.jpg"> </td>
+		<td class="tableIndex"> <img src="Barcos/ColorBajo/536.jpg"> </td>
+		<td class="tableIndex"> <img src="Barcos/ColorBajo/537.jpg"> </td>
+		<td class="tableIndex"> <img src="Barcos/ColorBajo/538.jpg"> </td>
+  </tr>
+        <tr>
+		  <td class="tableButton"><div>
+			  <button class="buttonVerBarco" onClick="MM_showHideLayers('listaBarcosRojo','','show')">Ver</button>
+			  <button class="buttonOcultarBarco" onClick="MM_showHideLayers('listaBarcosRojo','','hide')">Ocultar</button></div></td>
+			<td class="tableButton"><div>
+			  <button class="buttonVerBarco"
+					  onClick="MM_showHideLayers('listaBarcosVerde','','show')">Ver</button>
+			  <button class="buttonOcultarBarco"onClick="MM_showHideLayers('listaBarcosVerde','','hide')">Ocultar</button></div></td>
+			<td class="tableButton"><div>
+			  <button class="buttonVerBarco"
+					  onClick="MM_showHideLayers('listaBarcosAzul','','show')">Ver</button>
+			  <button class="buttonOcultarBarco"onClick="MM_showHideLayers('listaBarcosAzul','','hide')">Ocultar</button></div></td>
+			<td class="tableButton"><div>
+			  <button class="buttonVerBarco"onClick="MM_showHideLayers('listaBarcosMorado','','show')">Ver</button>
+			  <button class="buttonOcultarBarco"onClick="MM_showHideLayers('listaBarcosMorado','','hide')">Ocultar</button></div></td>
+        </tr>
+    </table>
+	<img src="Barcos/ColorAlto/537.jpg" alt="" width="227" height="320" id="listaBarcosAzul"/><img src="Barcos/ColorAlto/535.jpg" alt="" width="227" height="320" id="listaBarcosRojo"/><img src="Barcos/ColorAlto/536.jpg" alt="" width="224" height="320" id="listaBarcosVerde"/><img src="Barcos/ColorAlto/538.jpg" alt="" width="227" height="320" id="listaBarcosMorado"/>
+</body>
+</html>

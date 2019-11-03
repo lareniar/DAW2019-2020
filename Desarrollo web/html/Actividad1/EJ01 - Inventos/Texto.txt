@@ -1,0 +1,305 @@
+
+<p align=justify>1) MAQUINA DE ESCRIBIR:</p>
+<p align=justify>La que imprime letras, n�meros y otros signos cuando sus teclas 
+  son pulsadas u oprimidas.</p>
+<p align=justify>En diversos sectores del mundo moderno depende el hombre de esta 
+  m�quina, que permite escribir con gran rapidez.</p>
+<p align=justify>El acto de escribir a m�quina es, en s�, muy sencillo. La tarea 
+  principal es la de aprender de memoria la disposici�n del teclado.</p>
+<p align=justify>Las letras est�n generalmente dispuestas en el teclado en un 
+  orden universal.</p>
+<p align=justify>El papel se inserta en el rodillo o plat�n, que est� situado 
+  en un carro que va de derecha a izquierda conforme se hace funcionar el teclado. 
+  Un carrete de cinta entintada gira constantemente a trav�s de un angosto espacio 
+  enfrente del rodillo. Las palancas de los tipos hacen presi�n contra dicha cinta 
+  para imprimir letras sobre el papel.</p>
+<p align=justify>Las m�quinas de escribir tienen tambi�n otros mecanismos para 
+  acelerar la escritura y hacerla m�s exacta. Una palanca de la interl�nea est� 
+  de ordinario montada en el carro. Al ser movida, dicha palanca espacia el papel 
+  hacia adelante, a una nueva l�nea de escritura, y devuelve el carro a la derecha. 
+  Hay de ordinario una palanca ajustadora de espacio interlineal, que se puede 
+  ajustar o fijar para regular el espacio en blanco entre renglones.</p>
+<p align=justify>Los marginadores pueden fijarse de modo que las l�neas de impresi�n 
+  comiencen exactamente en la misma posici�n a la izquierda. El marginador para 
+  la derecha permite una alineaci�n regular al lado derecho del papel. La tecla 
+  de cambio de may�sculas se emplea para imprimir �stas. Mediante la tecla de 
+  cierre de may�sculas se puede sostener el carro y escribir s�lo may�sculas.</p>
+<p align=justify>Para proveer espacios entre palabras se pulsa con el pulgar la 
+  barra de espacios. En el teclado se encuentra la tecla de retroceso que sirve 
+  para que el mecan�grafo pueda hacer retroceder el carro y corregir lo que est� 
+  ya impreso en una l�nea. Algunas m�quinas llevan un dispositivo para ajustar 
+  el teclado al tacto del mecan�grafo.</p>
+<p align=justify>Evoluci�n de la M�quina de Escribir</p>
+<p align=justify>Las m�quinas de escribir no se generalizaron hasta el siglo XX, 
+  aunque la Primera patente para una m�quina de esta clase fue concedida alrededor 
+  del a�o 1714. Esta m�quina de escribir, que fue inventada por un ingl�s, no 
+  recibi� aplicaci�n pr�ctica.</p>
+<p align=justify>Al principio, las m�quinas de escribir se patentaron como mecanismos 
+  para ayuda de los ciegos. La patente de la primera m�quina de escribir que se 
+  registr� en los E.U.A, en 1829, correspondi� a Guillermo A. Burt. Se llam� tip�grafa, 
+  pero ning�n modelo suyo sobrevivi�.</p>
+<p align=justify>En 1888 invent� el franc�s Javier Progin una m�quina que utilizaba 
+  barras de tipo con una palanca de tecla para cada letra.</p>
+<p align=justify>Carlos Thurber, un norteamericano, patent� en 1848 una m�quina 
+  que usaba un juego de barras de tipos situadas alrededor de una rueda de lat�n. 
+  Esta se mov�a en un eje central, y el tipo entintado golpeaba directamente sobre 
+  el papel colocado debajo de la rueda. Su funcionamiento era demasiado lento 
+  para que dicha m�quina tuviera valor pr�ctico. A. E. Beach, tambi�n de los E.U.A., 
+  patent� en 1856 una m�quina de escribir en la que se emple� por la primera vez 
+  las barras de tipo dispuestas en forma de c�rculo que hac�an la impresi�n sobre 
+  un centro com�n. El a�o siguiente, S. W. Francis registr� una m�quina de escribir 
+  que utilizaba un teclado semejante al de un piano para actuar las barras de 
+  tipo.</p>
+<p align=justify>La primera m�quina de escribir pr�ctica y que se pod�a fabricar 
+  en gran escala fue la obra de tres inventores americanos: Crist�bal L. Sholes, 
+  Samuel W. Soule y Carlos Glidden, Sholes, con la ayuda personal y financiera 
+  de Santiago Densmore, perfeccion� su m�quina de escribir hasta que en 1878 adquiri� 
+  �sta un valor comercial.</p>
+<p align=justify>Esta m�quina presentaba la mayor�a de los principios de la m�quina 
+  moderna. Usaba un juego de barras de tipo montado en un eje sobre un anillo 
+  horizontal, accionadas por palancas conectadas, en turno, por varillas con las 
+  palancas del teclado. El papel se insertaba alrededor de un cilindro de caucho 
+  y los tipos golpeaban en una cinta entintada para marcar las letras en el papel. 
+  Esta m�quina ten�a carretes reversibles para la cinta, as� como un carro movible, 
+  que se pod�a devolver a su lugar al terminar de escribir un rengl�n. , Un defecto 
+  de esta m�quina, dotada s�lo de letras may�sculas, era que el cilindro estaba 
+  situado en forma tal, que el mecan�grafo no pod�a ver lo que estaba escribiendo.</p>
+<p align=justify>Invenciones posteriores aportaron la tecla de cambio de may�sculas, 
+  mediante la cual cada una de las barras pod�a llevar la letra correspondiente 
+  tanto en caracteres mayores colmo en menores. Para usar una u otra bastaba elevar 
+  o bajar el cilindro. Francisco Wagner patent� en 1896 la primera m�quina de 
+  escribir de acci�n frontal y visible que result� satisfactoria, pues resolvi� 
+  las dificultades de funcionamiento que presentaban las anteriores. La introducci�n 
+  de esta m�quina estaba destinada a revolucionar por completo la industria de 
+  las m�quinas de escribir.</p>
+<p align=justify>&nbsp;</p>
+<p align=justify>2) M�QUINA DE COSER:</p>
+<p align=justify>Pocas invenciones son de una utilidad tan amplia y ofrecen tantas 
+  ventajas como la m�quina de coser. Ella ha revolucionado el trabajo manual en 
+  las f�bricas y en el hogar, pues la costura es una idea m�s antiguas artes dom�sticas.</p>
+<p align=justify>La primera m�quina de coser fue inventada por el ingl�s Tom�s 
+  Saint. Patent� �ste en 1790 una m�quina que pose�a muchas de las caracter�sticas 
+  de la moderna de costura de cadeneta. Esta m�quina estaba principalmente destinada 
+  a trabajos en cuero. Ten�a una lezna movible, que perforaba agujeros por los 
+  que pod�a pasar el hilo. Nunca se utiliz�, ni se benefici� su inventor con ella.</p>
+<p align=justify>Bartolom� Thimonnier, un sastre franc�s de modestos recursos 
+  econ�micos, invent�, en 1830, una m�quina de coser que se asemejaba aun m�s 
+  al modelo actual, y que empez� a tener �xito en Francia. Sin embargo, un grupo 
+  de obreros, temerosos de que la m�quina los dejara sin trabajo, destruyeron 
+  el taller y las m�quinas. Thimonnier muri� en la pobreza. Mientras tanto, el 
+  norteamericano Gualterio Hunt, hab�a inventado, casi simult�neamente, una m�quina 
+  de coser que ten�a una aguja curva, con el ojo en la punta. Esta aguja hac�a 
+  pasar un hilo a trav�s de la tela para formar un lazo. Por �ste pasaba un segundo 
+  hilo con el que se formaba una costura de cadeneta. El segundo hilo era llevado 
+  por una lanzadera, como en las m�quinas modernas. Hunt no logr� obtener una 
+  patente. El honor de haber patentado, en 1846, la primera m�quina de coser que 
+  realmente se utiliz� le corresponde al norteamericano El�as Howe. Isaac M. Singer 
+  obtuvo una patente sobre su m�quina de coser en 1851. No obstante, Howe defendi� 
+  con �xito su prioridad y obtuvo el pago de derechos de invenci�n sobre casi 
+  todos los tipos de m�quinas de coser utilizados en aquella �poca.</p>
+<p align=justify>En 1850 patent� Al�en B. Wilson un tipo diferente de m�quina. 
+  Hac�a �sta uso de un gancho giratorio oscilante para coger el hilo superior, 
+  en lugar de la lanzadera deslizante que se us� primero. En 1856 invent� Jacobo 
+  Gibbs una m�quina que pod�a usar un solo hilo, formando una costura de cadeneta.</p>
+<p align=justify>Hay una gran variedad de m�quinas de coser, entre las que se 
+  incluyen m�quinas especiales para coser cuero, sombreros de fieltro, piezas 
+  acolchadas, botones, etc. Algunas m�quinas tienen varias agujas, y pueden hacer 
+  un n�mero de costuras paralelas, simult�neamente.</p>
+<p align=justify>Los principios b�sicos de las m�quinas de coser no han sufrido 
+  alteraciones radicales desde las tempranas invenciones. La aguja con ojo en 
+  la punta, el gancho giratorio y la lanzadera deslizante se utilizan a�n. El 
+  gancho giratorio coge el hilo superior y lo engarza en derredor del inferior 
+  para formar la costura de cadeneta. La lanzadera lleva el carrete del hilo inferior, 
+  y pasa a trav�s del lazo del hilo superior para formar la puntada. Las primeras 
+  m�quinas sol�an moverse mediante una manivela o pedales, pero hoy muchas de 
+  ellas funcionan a motor.</p>
+<p align=justify>&nbsp;</p>
+<p align=justify>3) CAMARA DE FOTOS:</p>
+<p align=justify>En fotograf�a, instrumento �ptico que se emplea para retratar 
+  personas u objetos o para obtener una constancia gr�fica permanente de alg�n 
+  suceso.</p>
+<p align=justify>Los fil�sofos de la antig�edad grecorromana ya mencionan un artefacto 
+  llamado en lat�n camera obscura, que consist�a en una caja enteramente cerrada, 
+  salvo uno de sus lados, en que hab�a un peque�o agujero por donde entraba la 
+  luz. Los objetos del exterior situados frente a este agujero proyectaban sus 
+  im�genes en posici�n invertida sobre la pared opuesta.</p>
+<p align=justify>Si esta pared era una pantalla trasl�cida, el observador pod�a 
+  ver las im�genes cubriendo su propia cabeza y la pantalla con un pa�o negro. 
+  En una c�mara oscura del tama�o de una habitaci�n pod�a el observador situarse 
+  dentro de ella y ver las im�genes proyectadas sobre un lienzo blanco.</p>
+<p align=justify>La primera descripci�n detallada de una c�mara oscura data del 
+  siglo XI. En el XVI las descripciones de los italianos Juan Porta y Daniel Barbaro 
+  suscitaron gran inter�s por este artefacto, que se empez� a usar en diversas 
+  formas con fines meramente recreativos. </p>
+<p align=justify>Hoy se construyen c�maras oscuras en playas y parques de diversi�n, 
+  en forma de casetas o tiendas, en el centro de las cuales hay una mesa sobre 
+  la que se proyecta la imagen del panorama exterior, que un dispositivo de lentes 
+  y espejos recoge y refleja de modo que no resulte invertida.</p>
+<p align=justify>La importancia de la c�mara oscura surge con su aplicaci�n a 
+  la fotograf�a a fines del siglo XVIII. El descubrimiento de un m�todo para que 
+  los rayos lum�nicos que formaban la imagen sobre una superficie dejasen una 
+  huella en la misma fue la iniciaci�n de la fotograf�a como ciencia. El aparato 
+  utilizado para esta fijaci�n de la imagen tom�, naturalmente, el nombre de su 
+  antecesora.</p>
+<p align=justify>C�maras Modernas</p>
+<p align=justify>En la actualidad se fabrican, para uso de aficionados o de fot�grafos 
+  profesionales, c�maras de diversos tipos y estilos. Las m�s comunes son las 
+  de caj�n, las de fuelle, las cinematogr�ficas, las de miniatura, las ultrarr�pidas 
+  y muchas otras. A pesar de tanta diversidad, poseen cuatro caracter�sticas comunes: 
+  objetivo, obturador y diafragma, portapel�cula y caja o estuche.</p>
+<p align=justify>El objetivo admite la luz y la enfoca sobre la pel�cula. El obturador 
+  regula el tiempo de exposici�n, o sea, el paso de la luz a trav�s del objetivo 
+  o lente; y en acci�n coordinada con el funcionamiento del mecanismo del obturador, 
+  el diafragma regula la amplitud de la abertura por la que penetra la luz a la 
+  c�mara. </p>
+<p align=justify>El portapel�cula retiene �sta en su lugar de modo que la luz 
+  admitida por el objetivo produzca una "imagen" - no visible de momento - que 
+  aparecer� al hacerse el revelado de la pel�cula. La caja aloja los diversos 
+  dispositivos y forma la c�mara oscura, a la que no llega m�s luz que la admitida 
+  en el momento de la exposici�n.</p>
+<p align=justify>El ojo humano viene a ser una c�mara fotogr�fica de precisi�n. 
+  En esta �ltima, la luz admitida por el diafragma (funci�n similar a la del iris 
+  ocular) se enfoca sobre la pel�cula, que equivale en el caso del ojo a la retina; 
+  del mismo modo, la misi�n del objetivo de la c�mara es an�loga a la del cristalino 
+  del ojo.</p>
+<p align=justify>El Objetivo</p>
+<p align=justify>La obtenci�n de una buena fotograf�a suele depender en gran parte 
+  del objetivo con que cuente la c�mara. El vidrio de la lente deber� ser fino, 
+  de alta calidad �ptica, a fin de que la imagen resulte definida y clara. El 
+  objetivo de menisco sencillo es el m�s simple de los que se usan en las c�maras 
+  para aficionados, ya que consta de una sola lente. Pero hay otros m�s complicados, 
+  como los que suelen llevar las c�maras de mayor precio, que emplean toda una 
+  sede de lentes, no siendo extra�o que su n�mero llegue a pasar de siete. Las 
+  lentes modernas para c�maras finas est�n recubiertas con fina capa microsc�pica 
+  (0,0068 mm.) de fluoruro de magnesio que contribuye a reducir la reflexi�n de 
+  la luz. No s�lo se consigue con esto que pase mayor cantidad de luz a trav�s 
+  de la lente, sino que, adem�s, se logra mayor claridad y precisi�n en la fotograf�a. 
+</p>
+<p align=justify>Diafragma, Obturador y Dispositivo de Enfoque</p>
+<p align=justify>Lo que en realidad se quiere dar a entender cuando se habla de 
+  un objetivo de tal o cual luminosidad es la capacidad de su lente o lentes para 
+  recoger la luz. Dicha capacidad se rige por dos factores: el di�metro de la 
+  lente y la distancia focal (del objetivo a la pel�cula). Esto �ltimo es muy 
+  importante para la transmisi�n de la imagen a la pel�cula, dado que la intensidad 
+  de la luz disminuye al aumentar la distancia a que se encuentra la fuente luminosa, 
+  es decir, el objetivo.</p>
+<p align=justify>Las marcas que suelen verse en los objetivos de las c�mara, por 
+  ejemplo, f/2, f/4,5, etc., indican su luminosidad. As�, f/2 significa que la 
+  distancia focal es el doble del di�metro de la abertura m�xima del objetivo. 
+  Esto equivale a decir que la distancia que media entre la lente y la pel�cula 
+  es dos veces mayor que el di�metro de la abertura del objetivo cuando se enfoca 
+  �ste para captar im�genes de cosas distantes. De ordinario, un objetivo f/4,5 
+  � mayor, es considerado r�pido, teni�ndose por lento uno de f/11 � f/16, que 
+  son los usuales en las c�maras de caj�n.</p>
+<p align=justify>Habiendo luz solar brillante no es menester toda la luminosidad 
+  de un objetivo r�pido; as�, las c�maras que lo tienen llevan tambi�n un diafragma 
+  que permite disminuir la entrada de luz. Por consiguiente, cuando hay luz intensa, 
+  se reduce la abertura del diafragma antes de tomar la fotograf�a; en d�as sin 
+  sol, o en interiores, se abre para que admita m�s luz.</p>
+<p align=justify>El t�rmino de abertura del obturador de la c�mara debe ser de 
+  gran precisi�n y, en la mayor parte de los casos, de extraordinaria brevedad. 
+  En las c�maras de caj�n el obturador suele ser una simple plaquita de metal, 
+  mientras que en las m�s finas est� constituido, bien por una serie conc�ntrica 
+  de delgadas hojas de acero, movidas por un sistema de engranajes tan complicado 
+  como el mecanismo de un reloj, bien por una pantalla o cortina situada ante 
+  la pel�cula que se descorre en el momento de la exposici�n mediante un preciso 
+  sistema de muelles. Con tal dispositivo, en lugar de contarse con una sola velocidad 
+  para tomar instant�neas, como ocurre con las c�maras de caj�n, se tienen ocho 
+  o m�s velocidades, que pueden variar desde un segundo hasta 1/1.000 de segundo.</p>
+<p align=justify>De ordinario, las instant�neas que toman al aire libre los aficionados 
+  s�lo requieren una velocidad del obturador de 1/50 de segundo.</p>
+<p align=justify>Pero si el objeto que se va a fotografiar se encuentra en movimiento, 
+  habr� que aumentar considerablemente la rapidez de acci�n del obturador, pues 
+  de lo contrario la fotograf�a resultar� "movida". La raz�n es muy sencilla: 
+  cada movimiento del objeto se reproduce en la pel�cula; en consecuencia, mientras 
+  menos tiempo permanezca abierto el obturador menos movimiento de la imagen se 
+  registrar� en la pel�cula.</p>
+<p align=justify>Hay tres factores que influyen grandemente en la eficacia con 
+  que funcione el obturador:la direcci�n en que el objeto se mueve en relaci�n 
+  con la ubicaci�n de la c�mara; la </p>
+<p align=justify>velocidad con que �ste se mueve y, finalmente, la distancia a 
+  que se encuentra el objeto en el momento en que se toma la fotograf�a. En el 
+  primer caso es f�cil comprender que se necesitar�a una acci�n rapid�sima del 
+  obturador para fotografiar de lado un autom�vil en plena carrera, a su paso 
+  frente a la c�mara; en cambio, la rapidez del obturador podr�a ser mucho menor 
+  si la fotograf�a se tomara de frente, esto es, cuando el veh�culo avanza en 
+  direcci�n a la c�mara. Respecto al segundo factor, es evidente la influencia 
+  que ejerce la velocidad con que se mueve el objeto, y no requiere explicaci�n. 
+  La importancia del tercer factor, o sea la distancia, se acent�a a medida que 
+  �sta es menor. As�, por ejemplo, se podr� fotografiar con una c�mara de obturador 
+  lento un avi�n que evolucione en el espacio, mas no en el momento del despegue 
+  o del aterrizaje, en que la distancia a que se encuentra el avi�n de la c�mara 
+  es mucho menor.</p>
+<p align=justify>En las c�maras m�s finas se logra mayor precisi�n en los detalles, 
+  ya sea que el objeto se encuentre cerca o lejos, mediante un dispositivo de 
+  enfoque. En cada graduaci�n de este dispositivo s�lo queda enfocada con precisi�n 
+  una zona determinada y bastante reducida. As�, por ejemplo, si el dispositivo 
+  ha sido graduado para un enfoque a 3 ms., la lente proyectar� sobre la pel�cula 
+  una imagen m�s o menos bien definida �nicamente de aquello que se encuentre 
+  alejado del obturador de 2,40 a 4,20 ms. Fuera de esta zona, lo dem�s aparecer� 
+  un tanto impreciso, es decir, fuera de foco. Sin embargo, con un diafragma iris 
+  ajustado de manera que la abertura sea m�s peque�a, se logra que la zona de 
+  enfoque aumente considerablemente. En el caso citado podr�an cambiarse los l�mites 
+  a 1,80 y 6,90 ms. La amplitud de esta zona de enfoque se reduce a medida que 
+  va siendo mayor la abertura del objetivo y, tambi�n, a medida que se acorta 
+  la distancia entre el objeto y la c�mara. Por ello, cuando se toman fotograf�as 
+  a muy corta distancia con bastante abertura del objetivo, conviene determinar 
+  con cuidado la distancia precisa a que se encuentra el objeto y regirse por 
+  ella al graduar el dispositivo de enfoque.</p>
+<p align=justify>Algunas c�maras van provistas de tel�metros acoplados a este 
+  dispositivo. Otras, entre ellas las llamadas de reflexi�n y las que usan los 
+  fot�grafos profesionales, cuentan con pantallas de vidrio esmerilado que permiten 
+  ver previamente la imagen que se proyectar� sobre la pel�cula, a fin de cerciorarse 
+  de que se ha hecho un enfoque correcto.</p>
+<p align=justify>4) AVION:</p>
+<p align=justify>Veh�culo a�reo m�s pesado que el aire que se utiliza para transportar 
+  personas o carga. Se mueve por acci�n de h�lices o motores de retropropulsi�n, 
+  y se sustenta por efecto de la resistencia del aire a ciertas superficies r�gidas.</p>
+<p align=justify>El hombre trat� desde tiempos remotos de imitar el vuelo de las 
+  aves. Crey� al principio que bastaba con proveerse de alas e ide� m�quinas a 
+  las que llam� ornit�pteros.</p>
+<p align=justify>Ninguna de ellas dio el resultado apetecido, y no fue sino hasta 
+  mediados del siglo XVIII que principiaron a construirse m�quinas capaces de 
+  desplazar m�s aire que el equivalente a su peso, logrando as� elevarse del suelo.</p>
+<p align=justify>Pero la utilidad de estos artefactos (globos y dirigibles) es 
+  limitada. La historia de la aviaci�n de hoy es la de los aparatos m�s pesados 
+  que el aire.</p>
+<p align=justify>Fundamentalmente, los aparatos m�s modernos de este tipo siguen 
+  construy�ndose con base en los mismos elementos que permitieron a los hermanos 
+  Wright y a Alberto Santos Dumont realizar los primeros vuelos pr�cticos a principios 
+  del siglo XX: alas que soportan el peso del aparato y su carga, y las superficies 
+  de cola que sirven para darle equilibrio y direcci�n. Mediante controles apropiados 
+  se hace variar la posici�n de algunas superficies para que el aparato suba, 
+  baje o vire en un sentido u otro.</p>
+<p align=justify>C�mo vuela el aparato</p>
+<p align=justify>El avi�n est� provisto de cl�sico motor alternativo de h�lice 
+  avanza por la tracci�n de �sta. La fuerza sustentadora radica en la forma de 
+  sus alas, en lo que t�cnicamente se designa como el "perfil de ala". Esta tiene 
+  una cara curva, la superior, y otra plana o casi plana. </p>
+<p align=justify>Cuando se mueve el aire en torno al ala, debe hacerlo de tal 
+  modo que si dos part�culas se separan en el borde anterior deben encontrarse 
+  en el borde posterior al mismo tiempo. Puesto que la cara superior es de curvatura, 
+  y por tanto superficie, mayor que la inferior, la part�cula que la recorre describe 
+  una trayectoria m�s larga que la otra y en el mismo tiempo, �sto es, con mayor 
+  velocidad.</p>
+<p align=justify>Existe un principio aerodin�mico seg�n el cual a ese aumento 
+  en la velocidad corresponde una disminuci�n de la presi�n y, por tanto, en el 
+  caso del ala, un efecto de succi�n hacia arriba.</p>
+<p align=justify>Para ilustrar este principio, pi�nsese en c�mo funciona un pulverizador, 
+  Por encima de la boca del tubo vertical que comunica con el l�quido se hace 
+  pasar una corriente r�pida de aire, y el efecto de succi�n hace que suba el 
+  l�quido y salga mezclado con el aire.</p>
+<p align=justify>A primera vista puede parecer que un impulso de este tipo no 
+  es lo suficientemente vigoroso para sustentar el avi�n. Debe tomarse en cuenta, 
+  sin embargo, que dicha fuerza est� actuando sobre toda la gran superficie de 
+  un ala y, adem�s, que la gran velocidad del avi�n da lugar a un empuje realmente 
+  notable por unidad de superficie.</p>
+<p align=justify>En el caso de un avi�n con motor a reacci�n el principio de sustentaci�n 
+  es id�ntico, pero debido a la velocidad muy superior que le imprime aquel las 
+  alas pueden ser de superficie mucho menor; as� act�an, primordialmente, como 
+  �rganos de equilibrio para estabilizar el aparato.</p>
+<p align=justify>Un motor de propulsi�n a chorro expulsa los gases a tal velocidad 
+  que el impacto contra el aire es violent�simo, tanto que, por reacci�n, el avi�n 
+  es impulsado en la direcci�n opuesta a una velocidad extraordinaria, ya que 
+  el principio f�sico de la acci�n y la reacci�n establece que a todo impulso 
+  en un sentido corresponde otro igual y contrario.</p>

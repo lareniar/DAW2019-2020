@@ -1,0 +1,23 @@
+/* CSS Document */
+body {
+    background-color: #FFCC66 ;
+}
+a{
+    color: #30B900;
+    text-decoration: none;
+}
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+p {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+h2 {
+	color: #6666FF;
+    font-family: Verdana;	
+}
+
+.cuarto {
+    color: #FFFFFF;	
+}

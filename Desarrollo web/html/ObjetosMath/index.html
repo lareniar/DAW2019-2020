@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        n = 7;
+        rangoInicio = 1;
+        rangoFin = 10;
+
+        Aleatorio(n, rangoInicio, rangoFin);
+
+        function Aleatorio(n, rangoInicio, rangoFin) {
+            aArray = [];
+            for (let i = 0; i < n; i++) {
+                encontrado = false;
+                x = Math.floor(Math.random() * rangoFin) + rangoInicio;
+                console.log(x);
+                NumeroNoRepetido(x);
+                console.log("Encontrado while" + encontrado);
+
+            }
+        };
+
+        function NumeroNoRepetido(iNumeroAleatorio) {
+            for (let j = 0; j < n; j++) {
+                if (aArray[j] == iNumeroAleatorio) {
+                    encontrado = true;
+                    console.log("Aaaa");
+                };
+
+            };
+            //for j
+            //si no ha encontrado una copia, lo añade al array
+            if (!encontrado) {
+                aArray.push(iNumeroAleatorio);
+                console.log("encontrado = false");
+                //si el numero es una copia, se genera otro y se vuelve a buscar un numero repetido
+            } else {
+                x = Math.floor(Math.random() * rangoFin) + rangoInicio;
+                encontrado = false;
+                NumeroNoRepetido(x);
+
+            }
+
+
+        };
+        for (let index = 0; index < aArray.length; index++) {
+            document.write(`<h2>${aArray[index]}</h2>`);
+
+        }
+    </script>
+</body>
+
+</html>

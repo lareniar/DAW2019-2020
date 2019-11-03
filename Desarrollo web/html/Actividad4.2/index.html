@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <button type="input" name="iniciar" onclick="regresiva()">Iniciar</button><br><br><br>
+    <script>
+        for (let i = 0; i < 4; i++) {
+            document.write(`<img src="../Actividad4/resources/n0.gif" id="iPicture${i}">`)
+        }
+        //funcion llamada desde el boton
+        function regresiva() {
+                reloj = setInterval(CuentaAtras, 1000);
+            }
+
+        function CuentaAtras() {
+            today = new Date();
+            min = ""+today.getMinutes();
+            seg = ""+today.getSeconds();
+            if (min.length < 2){
+                min = "0" + min;
+            }
+            if (seg.length < 2){
+                seg = "0" + seg;
+            }
+            console.log(min[1]);
+            document.getElementById("iPicture0").src = `../Actividad4/resources/n${min[0]}.gif`
+            document.getElementById("iPicture1").src = `../Actividad4/resources/n${min[1]}.gif`
+            document.getElementById("iPicture2").src = `../Actividad4/resources/n${seg[0]}.gif`
+            document.getElementById("iPicture3").src = `../Actividad4/resources/n${seg[1]}.gif`
+
+            console.log(min);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

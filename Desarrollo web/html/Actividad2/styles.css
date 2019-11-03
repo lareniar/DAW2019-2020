@@ -1,0 +1,134 @@
+body{
+    background-color: rgb(62, 171, 235);
+    position: absolute;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+
+.tableIndex{
+    border: 1px solid black;  
+    padding: 10px;
+    border-collapse: collapse;
+}
+.tableButton{
+    border: 1px solid black;  
+    padding: 10px;
+}
+.tableButton > div {
+	text-align: center;
+	color:red;
+}
+
+#pajaroAltoIndex{
+    position: absolute;
+    left: 544px;
+    top: 80px;
+}/*
+#barcoAltoIndex{
+    position: absolute;
+    left: 544px;
+    top: 80px;
+	visibility: hidden;
+}
+#pecesAltoIndex{
+    position: absolute;
+    left: 544px;
+    top: 80px;
+	visibility: hidden;
+}
+#trajesColorAlto{
+    position: absolute;
+    left: 544px;
+    top: 80px;
+	visibility: hidden;
+}
+*/
+/*listaPajaros.html*/
+#listaOrtega{
+    position: absolute;
+    left: 360px;
+    top: 360px;
+	visibility: hidden;
+}
+#listaNegra{
+    position: absolute;
+    left: 360px;
+    top: 360px;
+	visibility: hidden;
+}
+#listaRabilargo{
+    position: absolute;
+    left: 360px;
+    top: 360px;
+	visibility: hidden;
+}
+#listaAguila{
+    position: absolute;
+    left: 360px;
+    top: 360px;
+	visibility: hidden;
+}
+#listaPato{
+    position: absolute;
+    left: 360px;
+    top: 360px;
+    visibility: hidden;
+}
+/*Lista barcos*/
+#tablaBarcos{
+	display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#listaBarcosAzul{
+    position: absolute;
+    left: 560px;
+    top: 322px;
+	visibility: hidden;
+}
+#listaBarcosRojo{
+    position: absolute;
+    left: 40px;
+    top: 320px;
+	visibility: hidden;
+}
+#listaBarcosVerde{
+    position: absolute;
+    left: 280px;
+    top: 320px;
+	visibility: hidden;
+}
+#listaBarcosMorado{
+    position: absolute;
+    left: 800px;
+    top: 320px;
+	visibility: hidden;
+}
+
+/*Lista Trajes*/
+#trajeAlava{
+    position: absolute;
+    left: 360px;
+    top: 160px;
+}
+#trajeAlbacete{
+    position: absolute;
+    left: 480px;
+    top: 160px;
+}
+#trajeAlicante{
+    position: absolute;
+    left: 720px;
+    top: 160px;
+}
+#trajeAlmeria{
+    position: absolute;
+    left: 600px;
+    top: 160px;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<script>
+	 iContador = 1;
+	 iFin = 5;
+	function Boton(iTipoBoton){
+		if (iTipoBoton == "Siguiente"){
+				iContador++;
+			if (iContador > iFin){
+				iContador = 1;
+				imSello.src= `../resources/${iContador}.jpg`;
+			}else{
+				imSello.src= `../resources/${iContador}.jpg`;
+			}
+		}else {
+			iContador--;
+			if (iContador < 1){
+				iContador = iFin;
+				imSello.src= `../resources/${iContador}.jpg`;
+			}else{
+				imSello.src= `../resources/${iContador}.jpg`;
+			}
+		}
+	}
+	</script>
+	
+	<img id="imSello" src="../resources/1.jpg" width="98" height="160" alt=""/> <br><br>
+	<button name="Siguiente" onclick="Boton(name);">Siguiente</button>
+	
+	<button name="Anterior" onclick="Boton(name);">Anterior</button>
+</body>
+</html>

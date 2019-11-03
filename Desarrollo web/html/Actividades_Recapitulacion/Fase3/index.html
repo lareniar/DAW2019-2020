@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Juegos.js" charset="UTF-8"></script><link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    n = 5;
+
+    aTabla  = CrearTabla(n);
+    console.log(aTabla);
+    document.write("<table>");
+    for (let row = 0; row < n; row++) {
+        document.write("<tr>");
+        for (let column = 0; column < n; column++) {
+            document.write(`<td> <img id="imBola${aTabla[row][column]}" src="./Numeros/n${aTabla[row][column]}.gif" onclick="Cambiar(${row}, ${column})"> </td>`);
+            
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    function Cambiar(row, column){
+        alert('Fila: '+row + 'Columna' + column);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+p {
+    font-family: condensed;
+    text-align: justify;
+}
+table{
+    border-spacing: 0ch;
+}
+td{
+    border: 1px solid black;
+
+}
+td > p{
+    text-align: center;
+}
+.trAmarillo{
+    background-color: #FFFF00;
+    
+}
+.trAmarillo > td{
+    padding: 10px;
+}
+
+
+.trRosa{
+    background-color: #FFC0CB;
+    
+    
+}
+.trGris{
+    background-color: #808080;
+}

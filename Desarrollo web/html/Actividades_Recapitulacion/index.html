@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Juegos.js" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Hacer un contador de clicks regresivo
+        //un timer  n-1 al cuadrao
+        //o victoria porque funciona 
+        n = 2;
+        i = 1;
+        aTabla = CrearTabla(n);
+        aTablaComprobacion = new Array;
+        console.log(aTabla);
+        //al cargar la página creamos una tabla con n filas y x columnas
+        document.write("<table>");
+        iFilaCero = n - 1;
+        iColumnaCero = n - 1;
+        for (let row = 0; row < n; row++) {
+            document.write("<tr>");
+            for (let column = 0; column < n; column++) {
+                
+                aTablaComprobacion.push(i);
+                i++;
+                document.write(
+                    `<td> <img id="imBola${row}${column}" src="./Numeros/n${aTabla[row][column]}.gif" onclick="Cambiar(${row}, ${column})"> </td>`
+                );
+
+            }
+            document.write("</tr>");
+        }
+        console.log(i-1);
+        aTablaComprobacion[i-2] = 0 ;
+        document.write("</table>");
+
+        //funcion para cambiar imagenes de posicion
+        function Cambiar(row, column) {
+            //si el movimiento es posible
+            if ((row == iFilaCero && column + 1 == iColumnaCero) || (row == iFilaCero && column - 1 == iColumnaCero) ||
+                (column == iColumnaCero && row + 1 == iFilaCero) || (column == iColumnaCero && row - 1 == iFilaCero)) {
+                iNumeroAux = aTabla[row][column];
+                aTabla[row][column] = aTabla[iFilaCero][iColumnaCero];
+                aTabla[iFilaCero][iColumnaCero] = iNumeroAux;
+                document.getElementById(`imBola${row}${column}`).src = `./Numeros/n${aTabla[row][column]}.gif`
+                document.getElementById(`imBola${iFilaCero}${iColumnaCero}`).src = `./Numeros/n${aTabla[iFilaCero][iColumnaCero]}.gif`
+                iFilaCero = row;
+                iColumnaCero = column;
+                FinalizarJuego();
+            } else {
+                alert("imposible");
+            }
+        }
+
+        function FinalizarJuego(){
+            enumerado = false;
+            var indice = 0;
+            for (let row = 0; row < aTabla.length; row++) {
+                for (let column = 0; column < aTabla.length; column++) {
+                    if (aTabla[row][column] == aTablaComprobacion[indice]){
+
+                    
+                        enumerado = true;
+                        console.log("true");
+                    }else{
+                        enumerado  = false;
+                        break;
+                    }
+                    
+                }
+                
+                
+            }
+            if (enumerado){
+                alert("has ganado");
+            }else{
+                alert("no has ganado")
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

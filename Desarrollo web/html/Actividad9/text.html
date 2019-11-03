@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Script.js"  language="Javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //crear preguntas
+        document.write("<table>")
+        for (let index = 1; index < aPreguntas.length; index++) {
+            document.write(
+                `<tr><td><p class="textoForm" id=texto${index}>${aPreguntas[index]}</p></td><td><input type="checkbox" class="checkbox" id="pregunta${index}"></td></tr>`
+            );
+        }
+        document.write("<table>");
+        document.write(`<input type="button" onclick="Comprobar()" value="Comprobar"> `);
+
+        function Comprobar() {
+            puntuacion = 0;
+            for (let index = 1; index < aPreguntas.length; index++) {
+                bRespuesta = document.getElementById(`pregunta${index}`);
+                if (bRespuesta.checked == aRespuestas[index]) {
+                    puntuacion ++;
+                }else{
+                    puntuacion= puntuacion - 0.25;
+                    document.getElementById(`texto${index}`).style.backgroundColor = "red";
+                }
+                
+            }
+            alert(puntuacion);
+        }
+    </script>
+
+</body>
+
+</html>

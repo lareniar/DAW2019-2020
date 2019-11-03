@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Site de Plaiaundi</title>
+<script language="JavaScript" src="Cookies.js">
+</script>
+</head>
+
+<body>
+<h1>Français</h1>
+
+<input type="button" id="bBotonEus" value="Euskera" onClick="Euskera()">
+<input type="button" id="bBotonCas" value="Castellano" onClick="Castellano()">
+<input type="button" id="bBotonIng" value="Ingles" onClick="Ingles()" >
+<input type="button" id="bBotonFra" value="Frances" onClick="Frances()"disabled>
+<script>
+
+function Castellano(){
+		var dFecha=new Date()
+		dFecha.setMonth(dFecha.getMonth()+1)
+		mandarCookie("Idioma", 0,dFecha);
+		location.href = "Castellano.html";
+}
+function Euskera(){
+		var dFecha=new Date()
+		dFecha.setMonth(dFecha.getMonth()+1)
+		mandarCookie("Idioma", 1,dFecha);
+		location.href = "Euskera.html";
+}
+
+function Ingles(){
+		var dFecha=new Date()
+		dFecha.setMonth(dFecha.getMonth()+1)
+		mandarCookie("Idioma", 2,dFecha);
+		location.href = "Ingles.html";
+}
+
+</script>
+</body>
+</html>

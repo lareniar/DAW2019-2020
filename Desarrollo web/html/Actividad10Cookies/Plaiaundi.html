@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Página intermedia</title>
+    <script language="JavaScript" src="Cookies.js">
+    </script>
+</head>
+
+<body>
+    <script>
+        switch (consultarCookie("Idioma")) {
+            case "0":
+                location.href = "Castellano.html";
+                break;
+            case "1":
+                location.href = "Euskera.html";
+                break;
+            case "2":
+                location.href = "Ingles.html";
+                break;
+            case "3":
+                location.href = "Frances.html";
+                break;
+            default:
+                location.href = "Castellano.html";
+                break;
+        }
+    </script>
+</body>
+
+</html>

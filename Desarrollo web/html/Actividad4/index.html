@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <input type="number" id="valor" name="contador" placeholder="inserta un numero">
+    <button type="input" name="iniciar" onclick="regresiva()">Iniciar</button><br><br><br>
+    <script>
+
+        iTotalDigitos = 5;
+        sLongitud = 0;
+        bDentro = true;
+        let iContador = 0;
+        for (let i = 0; i < iTotalDigitos; i++) {
+            document.write(`<img src="resources/n0.gif" id="iPicture${i}">`)
+        }
+        function regresiva() {
+            if (bDentro) {
+                iContador = document.getElementById("valor").value;
+                if (iContador >= 0 && iContador < 10 ** iTotalDigitos) {
+                    reloj = setInterval(CuentaAtras, 20);
+                    bDentro = false;
+                } else {
+                    alert("Numero fuera de rango");
+                }
+            }
+        }
+
+        function CuentaAtras() {
+            sLongitud = iContador.toString().length;
+            //poner 0 si el numero tiene menos de 5 posiciones
+            for (i = 0; i < (iTotalDigitos - sLongitud); i++) {
+                //tantos 0 como longitud haya en la resta del for
+                iContador = ("0".concat(iContador));
+            }
+            //cambiar contador (int) a string
+            sContador = iContador.toString();
+            //escribir numeros en las imagenes
+            for (i = 0; i < iTotalDigitos; i++) {
+                document.getElementById(`iPicture${i}`).src = `resources/n${sContador[i]}.gif`
+            }
+            //si el numero es cero se finaliza
+            if (iContador == 0) {
+                bDentro = true;
+                clearInterval(reloj);
+            }
+            iContador--;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

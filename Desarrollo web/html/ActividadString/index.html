@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="http://212.170.160.65/Strings.js" charset="UTF-8"></script>
+<!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+  <script>
+        function SinVocal(){
+        sCadena = document.getElementById("sCadena").value;
+        x = SinVocales(sCadena);
+        sResultado.innerHTML = x;
+    }
+    </script>
+<div style="position: absolute; left: 271px; top: 100px;"><input type="text" id="sCadena" value="Cadena Modelo"></div>
+<div style="position: absolute; left: 271px; top: 155px;"><span id="sResultado">AQUÍ EL RESULTADO</span></div>
+<p>FUNCIONES DE CADENAS DE CARACTERES </p>
+<p><button>Invertir </button></p>
+<p>
+  <button>CaMeL</button></p>
+<p><button onclick="SinVocal()">Sin vocales </button></p>
+<p>
+  <button>Cripto +1</button></p>
+<p>
+  <button>Descripto -1</button></p>
+<p>
+  <button>Trim</button></p>
+
+</body>
+</html>

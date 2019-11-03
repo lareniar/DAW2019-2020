@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Documento sin título</title>
+</head>
+
+<body>
+	<!-- 
+	<script>
+		i = 0;
+		function Saludo(){
+			i++;
+			valor.innerText=i;
+			setTimeout(Saludo, 500);
+		}
+		setTimeout(Saludo, 500);
+	</script>
+	-->
+	<script>
+		i = 0;
+		bStartStop = true;
+		function Saludo() {
+			valor.innerText = i;
+			i++;
+		}
+
+		function Controlador() {
+			if (bStartStop) {
+				clearTimeout(iReloj);
+			} else {
+				iReloj = setInterval(Saludo, 1);
+			}
+			bStartStop = !bStartStop;
+		}
+
+		iReloj = setInterval(Saludo, 1);
+	</script>
+
+	<p id="valor">0</p>
+	<button id="boton" onclick="Controlador()">Parar</button>
+</body>
+
+</html>

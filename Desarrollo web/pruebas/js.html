@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+	<p id="pParrafo">Sorpresa</p>
+	<button onClick="Plaiaundi()">Plaiaundi!</button>
+	<button onClick="Irun()">Irun!</button>
+</body>
+	
+	<script language="JavaScript">
+		
+		var pMiParrafo = document.getElementById("pParrafo");
+		function Cambiar(){
+			
+			console.log("Oleee padentro socio")
+			pMiParrafo.innerHTML = "IRUN";
+		}
+		
+		function Plaiaundi(){
+			
+			console.log("Clic plaiaundi")
+			pMiParrafo.innerHTML = "Plaiaundi";
+		}
+		function Irun(){
+			
+			console.log("Clic irun")
+			pMiParrafo.innerHTML = "IRUN";
+		}
+		
+</script>
+</html>

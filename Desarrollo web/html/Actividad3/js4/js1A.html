@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+
+<script>
+	 iContador = 1;
+	 iFin = 5;
+	
+	function Siguiente(){
+		iContador++;
+		if (iContador > iFin){
+			alert("Has llegado al fin")
+			iContador = iFin;
+		}else{
+			imSello.src= `../resources/${iContador}.jpg`
+		}
+	}
+	
+		function Anterior(){
+		iContador--
+		if (iContador < 1){
+			alert("Has llegado al fin")
+			iContador = 1;
+		}else{
+			imSello.src= `../resources/${iContador}.jpg`
+		}
+	}
+	</script>
+	
+	<img id="imSello" src="../resources/1.jpg" width="98" height="160" alt=""/> <br><br>
+	<button name="Siguiente" onclick="Siguiente();">Siguiente</button>
+	
+	<button name="Anterior" onclick="Anterior();">Anterior</button>
+</body>
+</html>

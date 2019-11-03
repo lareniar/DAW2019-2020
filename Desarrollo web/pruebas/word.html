@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body>
+<div class="img" style="position: absolute; left: 440px; top: 133px;"><img src="Imagenes/tWord.gif" alt="" width="131" height="38" id="word"/></div>
+<div class="img" style="position: absolute; left: 269px; top: 80px;"><img src="Imagenes/tAccess.gif" alt="" width="131" height="38" id="access"/></div>
+<div class="img" style="position: absolute; left: 629px; top: 95px;"><img src="Imagenes/tExcel.gif" alt="" width="131" height="38" id="excel"/></div>
+
+	
+<div style="position: absolute; left: 560px; top: 200px;"><img src="Iconos/Excel.GIF" alt="" width="42" height="38" onMouseOver="MM_showHideLayers('word','','hide','access','','hide','excel','','show')"/></div>
+<div style="position: absolute; left: 400px; top: 200px; width: 40px; height: 38px;"><img src="Iconos/Word.GIF" alt="" width="40" height="37" onMouseOver="MM_showHideLayers('word','','show','access','','hide','excel','','hide')"/></div>
+<span style="position: absolute; left: 480px; top: 200px;"><img src="Iconos/Access.GIF" alt="" width="40" height="40" onMouseOver="MM_showHideLayers('word','','hide','access','','show','excel','','hide')"/></span>
+	<h2 style="position: absolute; left: 352px; top: 14px;">Pasa el ratón por los elementos</h2>
+</body>
+</html>

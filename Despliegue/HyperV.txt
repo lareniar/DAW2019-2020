@@ -1,0 +1,3 @@
+Activar esto Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+Activar en caracteristicas de windows el HyperV

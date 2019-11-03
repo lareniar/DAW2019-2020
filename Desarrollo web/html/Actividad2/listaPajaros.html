@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+
+<body>
+	<h1>PAJAROS</h1>
+<table class="tableIndex">
+        <tr>
+			<td class="tableIndex"> <img src="Pajaros/ColorBajo/2134.jpg"> </td>
+			<td class="tableIndex"> <img src="Pajaros/ColorBajo/2135.jpg"> </td>
+			<td class="tableIndex"> <img src="Pajaros/ColorBajo/2136.jpg"> </td>
+			<td class="tableIndex"> <img src="Pajaros/ColorBajo/2137.jpg"> </td>
+			<td class="tableIndex"> <img src="Pajaros/ColorBajo/2138.jpg"> </td>
+			<th rowspan = "2"><div><button id="buttonOrtega" onClick="MM_showHideLayers('listaOrtega','','hide','listaNegra','','hide','listaRabilargo','','hide','listaAguila','','hide','listaPato','','hide')">Borrar</button></div></th>
+  </tr>
+        <tr>
+		  <td class="tableButton"><div><button id="buttonOrtega" onClick="MM_showHideLayers('listaOrtega','','show','listaNegra','','hide','listaRabilargo','','hide','listaAguila','','hide','listaPato','','hide')">Ortega</button></div></td>
+		  <td class="tableButton"><div><button id="buttonNegra" onClick="MM_showHideLayers('listaOrtega','','hide','listaNegra','','show','listaRabilargo','','hide','listaAguila','','hide','listaPato','','hide')">Cigüeña Negra</button></div></td>
+		  <td class="tableButton"><div><button id="buttonRabilargo" onClick="MM_showHideLayers('listaOrtega','','hide','listaNegra','','hide','listaRabilargo','','show','listaAguila','','hide','listaPato','','hide')">Rabilargo</button></div></td>
+		  <td class="tableButton"><div><button id="buttonAguila" onClick="MM_showHideLayers('listaOrtega','','hide','listaNegra','','hide','listaRabilargo','','hide','listaAguila','','show','listaPato','','hide')">Aguila</button></div></td> 
+		  <td class="tableButton"><div><button id="buttonPato" onClick="MM_showHideLayers('listaOrtega','','hide','listaNegra','','hide','listaRabilargo','','hide','listaAguila','','hide','listaPato','','show')">Pato</button></div></td>
+        </tr>
+    </table>
+    <img src="Pajaros/ColorAlto/2134.jpg" alt="" width="320" height="228" id="listaOrtega"/>
+	<img src="Pajaros/ColorAlto/2135.jpg" alt="" width="320" height="228" id="listaNegra"/>
+	<img src="Pajaros/ColorAlto/2136.jpg" alt="" width="228" height="320" id="listaRabilargo"/>
+	<img src="Pajaros/ColorAlto/2137.jpg" alt="" width="320" height="227" id="listaAguila"/>
+	<img src="Pajaros/ColorAlto/2138.jpg" alt="" width="228" height="320" id="listaPato"/>
+</body>
+</html>
