@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<h1>Castellano</h1>
+<h1>Buenos días</h1>
 
 <input type="button" id="bBotonEus" value="Euskera"  onClick="Euskera()">
 <input type="button" id="bBotonCas" value="Castellano" onClick="Castellano()" disabled>
@@ -18,21 +18,21 @@
 
 function Euskera(){
 		var dFecha=new Date()
-		dFecha.setMonth(dFecha.getMonth()+1)
+		dFecha.setDay(dFecha.getDay()+10)
 		mandarCookie("Idioma", 1,dFecha);
 		location.href = "Euskera.html";
 }
 
 function Ingles(){
 		var dFecha=new Date()
-		dFecha.setMonth(dFecha.getMonth()+1)
+		dFecha.setDay(dFecha.getDay()+10)
 		mandarCookie("Idioma", 2,dFecha);
 		location.href = "Ingles.html";
 }
 
 function Frances(){
 		var dFecha=new Date()
-		dFecha.setMonth(dFecha.getMonth()+1)
+		dFecha.setDay(dFecha.getDay()+10)
 		mandarCookie("Idioma",3,dFecha);
 		location.href = "Frances.html";
 }

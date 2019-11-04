@@ -11,15 +11,18 @@
 </head>
 
 <body>
+        <script language="JavaScript" src="../Actividad10Cookies/Cookies.js"></script>
+
     <script>
+        
         //Hacer un contador de clicks regresivo
-        //un timer  n-1 al cuadrao
+        //un timer  n-1 al cuadrado
         //o victoria porque funciona 
         n = 2;
         i = 1;
         aTabla = CrearTabla(n);
         aTablaComprobacion = new Array;
-        console.log(aTabla);
+
         //al cargar la página creamos una tabla con n filas y x columnas
         document.write("<table>");
         iFilaCero = n - 1;
@@ -37,7 +40,7 @@
             }
             document.write("</tr>");
         }
-        console.log(i-1);
+
         aTablaComprobacion[i-2] = 0 ;
         document.write("</table>");
 
