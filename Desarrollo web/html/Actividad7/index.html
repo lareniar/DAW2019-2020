@@ -4,17 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UAç -Compatible" content="ie=edge">
     <script src="Juegos.js" charset="UTF-8"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Document</title>
 </head>
 
 <body>
-        <script language="JavaScript" src="../Actividad10Cookies/Cookies.js"></script>
-
     <script>
+        //cookies
+        console.log("Consultar cookie: " );
+        mandarCookie("Nivel", 2, dFecha);
         
+        switch (consultarCookie("Nivel")) {
+            case "0":
+                alert("Cookie 0");
+                break;
+            case "1":
+                alert("Cookie 1");
+                break;
+            case "2":
+                alert("Cookie 2");
+                break;
+            case "3":
+                alert("Cookie 3");
+                break;
+            default:
+                alert("Cookie 4");
+                break;
+        }
         //Hacer un contador de clicks regresivo
         //un timer  n-1 al cuadrado
         //o victoria porque funciona 
@@ -30,7 +48,7 @@
         for (let row = 0; row < n; row++) {
             document.write("<tr>");
             for (let column = 0; column < n; column++) {
-                
+
                 aTablaComprobacion.push(i);
                 i++;
                 document.write(
@@ -41,7 +59,7 @@
             document.write("</tr>");
         }
 
-        aTablaComprobacion[i-2] = 0 ;
+        aTablaComprobacion[i - 2] = 0;
         document.write("</table>");
 
         //funcion para cambiar imagenes de posicion
@@ -53,7 +71,8 @@
                 aTabla[row][column] = aTabla[iFilaCero][iColumnaCero];
                 aTabla[iFilaCero][iColumnaCero] = iNumeroAux;
                 document.getElementById(`imBola${row}${column}`).src = `./Numeros/n${aTabla[row][column]}.gif`
-                document.getElementById(`imBola${iFilaCero}${iColumnaCero}`).src = `./Numeros/n${aTabla[iFilaCero][iColumnaCero]}.gif`
+                document.getElementById(`imBola${iFilaCero}${iColumnaCero}`).src =
+                    `./Numeros/n${aTabla[iFilaCero][iColumnaCero]}.gif`
                 iFilaCero = row;
                 iColumnaCero = column;
                 FinalizarJuego();
@@ -62,29 +81,50 @@
             }
         }
 
-        function FinalizarJuego(){
+        function FinalizarJuego() {
             enumerado = false;
             var indice = 0;
             for (let row = 0; row < aTabla.length; row++) {
                 for (let column = 0; column < aTabla.length; column++) {
-                    if (aTabla[row][column] == aTablaComprobacion[indice]){
+                    if (aTabla[row][column] == aTablaComprobacion[indice]) {
 
-                    
+
                         enumerado = true;
                         console.log("true");
-                    }else{
-                        enumerado  = false;
+                    } else {
+                        enumerado = false;
                         break;
                     }
-                    
+
                 }
-                
-                
+
             }
-            if (enumerado){
+            if (enumerado) {
                 alert("has ganado");
-            }else{
+            } else {
                 alert("no has ganado")
+            }
+        }
+
+        function mandarCookie(nombre, valor, caducidad) {
+            document.cookie = nombre + "=" + escape(valor) + ((caducidad == null) ? "" : ("; expires=" + caducidad
+                .toGMTString()))
+                console.log("mandarCookie " );
+        }
+
+        function consultarCookie(nombre) {
+            var buscamos = nombre + "=";
+            var i
+
+            if (document.cookie.length > 0) {
+                var i = document.cookie.indexOf(buscamos);
+                if (i != -1) {
+                    i += buscamos.length;
+                    j = document.cookie.indexOf(";", i);
+                    if (j == -1) j = document.cookie.length;
+
+                    return unescape(document.cookie.substring(i, j));
+                }
             }
         }
     </script>
