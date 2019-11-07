@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Carrito.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        for (let i = 0; i < aArticulos.length; i++) {
+            if( aArticulos[i].id == sessionStorage.getItem("IdComprando"))
+                document.write(`<img src="Mercado/${aArticulos[i].imagen}.jpg"></img>`);
+        }
+    function EnviarCompra(){
+        
+        sessionStorage.cantidadCompra = document.getElementById("tbCantidad").value;
+        sessionStorage.getItem("cantidadCompra");
+        window.location="Carrito.html";
+        
+    }
+    </script>
+    <input type="text" placeholder="Escribe la cantidad" name="cantidad" id="tbCantidad">
+    <input type="button" value="Comprar" onclick="EnviarCompra()">''
+    
+</body>
+</html>
