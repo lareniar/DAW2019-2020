@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- ACCESIBILIDAD WEB
+
+  Para esta página se ha tratado de utilizar colores monocromáticos (blanco y negro) además de un tono azul para facilitar la visualización del contenido y además de tener un color simbólico de la página
+
+  Se han puesto avisos de New para indicar que hay contenido(s)/enlaces nuevos 
+
+  Se han indicado en la parte inferior izquierda una leyenda de las imagenes y videos además de un alter por si no carga la conexion
+
+  Todos los botones tienen enlaces activos
+
+  Hay parte del contenido que es responsive por si el usuario entra con dispositivos de menor pixelaje y las unidades estan en em
+
+  Los títulos se diferencian del texto y todo el contenido de caracter está tabulado a la izquierda
+
+  Los iconos que son enlaces tienen acompañado un texto descriptivo
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</head>
+<title>Document</title>
+</head>
+
+<body>
+  <!-- NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand " href="index.html">
+      <p>J.J Vázquez</p>
+    </a>
+
+    <!--  Boton Inicio -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <p>Inicio</p> <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <!--  Dropdown Biografia -->
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            Biografia</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="biografia.html">Antena 3</a>
+            <a class="dropdown-item" href="biografia.html">Telecinco</a>
+          </div>
+        </li>
+        <!--  Boton Trayectoria -->
+        <li class="nav-item active">
+          <a class="nav-link" href="trayectoria.html">Trayectoria</a>
+        </li>
+        <!--  Boton Premios -->
+        <li class="nav-item active">
+          <a class="nav-link" href="premios.html">Premios</a>
+        </li>
+        <!--  Boton Wikipedia -->
+        <li class="nav-item active">
+          <a class="nav-link" href="https://es.wikipedia.org/wiki/Jorge_Javier_V%C3%A1zquez">Wikipedia<span
+              class="badge badge-secondary">New</span></a>
+        </li>
+
+      </ul>
+
+
+      <!-- SERACHBAR & BUTTON-->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- /NAVBAR-->
+
+  <!-- CONTENT-->
+  <div class="dropdown">
+    <!-- Link or button to toggle dropdown -->
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      <li><a tabindex="-1" href="#">Action</a></li>
+      <li><a tabindex="-1" href="#">Another action</a></li>
+      <li><a tabindex="-1" href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a tabindex="-1" href="#">Separated link</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 text-center">
+
+        <h3>Etapa en Antena 3</h3>
+        <div>
+          <p>En 1997 comenzó una colaboración en el programa de Antena 3 Extra Rosa, conducido al alimón por Rosa
+            Villacastín y Ana Rosa Quintana. El año siguiente, sería colaborador del magazín de tarde Sabor a ti y de su
+            edición veraniega Sabor a verano. En 2001 se estrenó como presentador junto a Francine Gálvez en Rumore,
+            rumore. En Antena 3 también participó en un programa matutino titulado Llama y debate</p>
+        </div>
+        <h3>Etapa en Telecinco</h3>
+        <div>
+          <p>Tras su etapa en Antena 3, dio el salto definitivo a Telecinco, cadena en la que comenzó colaborando en el
+            programa Día a día, presentado por María Teresa Campos.<br><br>
+
+            En marzo de 2003, comenzó a presentar junto con Carmen Alcayde Aquí hay tomate, que se mantuvo en parrilla
+            hasta el 1 de febrero de 2008 y cuya cancelación fue anunciada por sorpresa.4​ A la par que este programa,
+            en 2007 presentó el espacio Hormigas blancas, que se centraba en repasar la vida de personajes populares. En
+            septiembre de 2008, tras pasar varios meses alejado de la televisión, se reincorporó a la cadena para
+            conducir los resúmenes diarios del reality show Gran Hermano 10, así como el debate emitido los
+            domingos.<br><br>
+
+            En marzo de 2009, tras comenzar las emisiones del reality show Supervivientes, Perdidos en Honduras fue el
+            encargado de presentar un late night llamado Sálvame, cuya finalidad era en principio repasar los
+            acontecimientos de Supervivientes y servir de apoyo al programa. Debido a la buena audiencia conseguida,
+            comenzó a presentar de forma diaria dicho programa, que renovó las tardes de Telecinco, en sustitución de
+            Está pasando.<br><br>
+
+            El 10 de febrero de 2010 comenzó a presentar un programa de apoyo llamado a ¡Más que baile! llamado ¡Mira
+            quién mira! . En marzo de ese mismo año, Jorge Javier sería sustituido por Tania Llasera.5​<br><br>
+
+            En mayo de 2011, Jorge Javier Vázquez asume la responsabilidad de conducir su primer reality en Telecinco.
+            Así, el formato de Telecinco Supervivientes: Perdidos en Honduras 2011, lo conduce Jorge Javier, junto con
+            Raquel Sánchez-Silva como copresentadora desde la isla y Christian Gálvez como presentador del debate de
+            supervivientes y de la última hora.<br><br>
+
+            El 21 de julio de 2011, Telecinco comunica a los medios de comunicación mediante una nota que Jorge Javier
+            Vázquez renueva su contrato por tres años más, debido a su éxito en programas como Sálvame, Sálvame Deluxe
+            (más tarde llamado Sábado Deluxe) y Supervivientes 2011. Tras el éxito de Supervivientes, le concedieron su
+            segundo reality, Acorralados, copresentado por Raquel Sánchez Silva y con el mismo equipo de Supervivientes;
+            además de seguir conduciendo el espacio vespertino Sálvame.<br><br>
+
+            Desde abril de 2009, presenta el programa de Sálvame (de lunes a jueves), mientras que la tarde de los
+            viernes lo presenta su compañera Paz Padilla. Ya los sábados por la noche, desde las 22:00 hasta las 02:30
+            de la madrugada, presenta el programa Sábado Deluxe (hasta 2017, emitido los viernes bajo el nombre de
+            Sálvame Deluxe).<br><br>
+
+            En mayo de 2011, asume la conducción de Supervivientes: Perdidos en Honduras junto con Raquel Sánchez-Silva.
+            En ese año se finalizó el reality, pero tres años después se volvió a emitir, esta vez, el debate y la
+            última hora fue presentado por Álvaro de la Lama.<br><br>
+
+            En agosto de 2011, Telecinco le otorga a Jorge Javier Vázquez la conducción de Acorralados, un reality show
+            estrenado en septiembre de 2011, también con la participación de Raquel Sánchez Silva.<br><br>
+
+            En diciembre de 2011 dio las campanadas junto a la cantante española Isabel Pantoja y su hijo Kiko Rivera en
+            Telecinco.<br><br>
+
+            Desde abril de 2012 y hasta marzo de 2014, aunque tras abandonarlo por unos meses en noviembre de ese mismo
+            vuelve a conducirlo en la misma cadena el programa Hay una cosa que te quiero decir.6​<br><br>
+
+            El 8 de noviembre de 2012 Jorge Javier publicaba un libro autobiográfico titulado La vida iba en
+            serio.<br><br>
+
+            En septiembre de 2014 Jorge Javier protagoniza un controvertido diálogo en directo con el secretario general
+            del PSOE durante la emisión de Sálvame, a raíz de los acontecimientos relacionados con el maltrato animal
+            durante las fiestas del Toro de la Vega.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /CONTENT-->
+  <!-- FOOTER -->
+  <footer class="page-footer font-small blue pt-4">
+
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <h5 class="text-uppercase">J.J. VÁZQUES INDUSTRIES</h5>
+          <p>Todo este contenido pertenece a J.J. Vázquez, el autor de esta <br><br> página no se hace cargo de el
+            mal uso de esta información</p>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="col-md-3 mb-md-0 mb-5">
+
+          <h5 class="text-uppercase">RR.SS.</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://twitter.com/jjaviervazquez?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                <img class="rrssFooter" src="resources/twitterlogo.png" alt="twitterlogo">
+                <p>Twitter</p></img>
+              </a>
+
+              <a href="https://www.facebook.com/jorgejaviervazqueztv">
+                <img class="rrssFooter" src="resources/fblogo.png" alt="twitterlogo">
+                <p>Facebook</p>
+              </a>
+              <a href="https://www.facebook.com/jorgejaviervazqueztv">
+                <img class="rrssFooter" src="resources/iglogo.png" alt="twitterlogo">
+                <p>Instagram</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- /LINKS -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> jjvazquez.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- /FOOTER -->
+</body>
+
+</html>
