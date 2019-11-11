@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        CrearPalabra();
+
+        function CrearPalabra() {
+            
+            
+            //creamos un array de dias
+            aDias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+            //creamos una fecha
+            sDia = new Date();
+            //creamos una string donde cogemos el numero del dia en la posicion del array de dias (dia 4 = Miercoles)
+            sNombreDia = aDias[sDia.getDay()];
+            
+            //pasamos el dia a una cadena
+            sCadena = sNombreDia;
+            //ponemos en mayusculas para coincidir con la ruta del gif
+            sCadena = sCadena.toUpperCase();
+
+            //array para guardar las letras ya pulsadas
+            aLetras = [];
+            //crear una imagen por letra con la posibilidad de clickarlo
+            for (var i = 0; i < sCadena.length; i++) {
+                document.write('<img id="letra' + i + '" src="Letras/' + sCadena[i] + '.gif" onClick="Blanco(' + i +
+                    ')"></img>');
+                aLetras[i] = true;
+            }
+
+        }
+        
+        function Blanco(iNumero) {
+            //si la posicion esta false quiere decir que la letra ya ha sido clicada, entonces sale el alert
+            if (aLetras[iNumero] == false) {
+                alert("Esta letra ya esta vacia");
+            }
+            else {
+                //cambiamos la letra a blanco
+                document.getElementById("letra" + iNumero).src = "Letras/Blanco.gif";
+                //letra en blanco entonces si se vuelve a clicar la misma sale alert linea 44 
+                aLetras[iNumero] = false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+El ejercicio 1 está finalizado
+
+El ejercicio 2 consigue sacar la información del botón seleccionado, es decir si haces clic en el radio button 2 de un pregunta en concreto (estan agrupados los radio), saldra el boton al que has hecho clic, faltaria haceer el html resultado y pasarle la cookie
+
+El ejercicio 3 esta funcionando, se ha comprobado que cuando hacemos un setDate y le sumamos un día, aparece el siguiente. (Si es viernes y hacemos + 1 en set day, aparece sabado.)

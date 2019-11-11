@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://185.60.40.210/Cookies.js"></script>
+    <script src="Preguntas.js"></script>
+    <title>Document</title>
+    <style>
+        table {
+            border-spacing: 0;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        for (let index = 0; index < aPreguntas.length; index++) {
+            //escribir header y pregunta
+            document.write("<table>")
+            document.write("<tr>");
+            document.write(`<th> ${index} </th>`);
+            document.write(`<th> ${aPreguntas[index]} </th>`);
+            document.write("</tr>");
+            //escribir boton y respuesta 1
+            document.write("<tr>");
+            document.write(`<th> <input type="radio" name="boton${index}" value="1"></th>`);
+            document.write(`<th> ${aRespuestas[index][1]} </th>`);
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write(`<th> <input type="radio" name="boton${index}" value="2"></th>`);
+            document.write(`<th> ${aRespuestas[index][2]} </th>`);
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write(`<th> <input type="radio" name="boton${index}" value="3"></th>`);
+            document.write(`<th> ${aRespuestas[index][3]} </th>`);
+            document.write("</tr>");
+            document.write("<tr>");
+            document.write(`<th> <input type="radio" name="boton${index}" value="4"></th>`);
+            document.write(`<th> ${aRespuestas[index][4]} </th>`);
+            document.write("</tr>");
+            document.write("</table>")
+            document.write("<br>")
+
+        }
+        document.write(`<input type="button" id="bBotonRespuesta" value="Resultado" onClick="Resultado()">`)
+
+        function Resultado() {
+            //coger todos los radio button por grupo
+            var radios = document.getElementsByName('boton0');
+
+            for (var i = 0, length = radios.length; i < length; i++) {
+                if (radios[i].checked) {
+                    // do whatever you want with the checked radio
+                    alert(radios[i].value);
+
+                    // only one radio can be logically checked, don't check the rest
+                    break;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
