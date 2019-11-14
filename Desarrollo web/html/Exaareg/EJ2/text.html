@@ -30,22 +30,13 @@
             document.write(`<th> ${aPreguntas[index]} </th>`);
             document.write("</tr>");
             //escribir boton y respuesta 1
-            document.write("<tr>");
-            document.write(`<th> <input type="radio" name="boton${index}" value="1"></th>`);
-            document.write(`<th> ${aRespuestas[index][1]} </th>`);
+            for (let id = 0; id < aPreguntas.length-1; id++) {
+                document.write("<tr>");
+            document.write(`<th> <input type="radio" name="boton${index}" value="${id+1}"></th>`);
+            document.write(`<th> ${aRespuestas[index][id]} </th>`);
             document.write("</tr>");
-            document.write("<tr>");
-            document.write(`<th> <input type="radio" name="boton${index}" value="2"></th>`);
-            document.write(`<th> ${aRespuestas[index][2]} </th>`);
-            document.write("</tr>");
-            document.write("<tr>");
-            document.write(`<th> <input type="radio" name="boton${index}" value="3"></th>`);
-            document.write(`<th> ${aRespuestas[index][3]} </th>`);
-            document.write("</tr>");
-            document.write("<tr>");
-            document.write(`<th> <input type="radio" name="boton${index}" value="4"></th>`);
-            document.write(`<th> ${aRespuestas[index][4]} </th>`);
-            document.write("</tr>");
+            }
+            
             document.write("</table>")
             document.write("<br>")
 
@@ -53,18 +44,27 @@
         document.write(`<input type="button" id="bBotonRespuesta" value="Resultado" onClick="Resultado()">`)
 
         function Resultado() {
+            puntuacion = 0;
             //coger todos los radio button por grupo
-            var radios = document.getElementsByName('boton0');
+            
+            for (let id = 0; id < aPreguntas.length; id++) {
 
+                var radios = document.getElementsByName(`boton${id}`);
+           
             for (var i = 0, length = radios.length; i < length; i++) {
-                if (radios[i].checked) {
+                if (radios[i].checked && radios[i].value==aSoluciones[id]) {
                     // do whatever you want with the checked radio
-                    alert(radios[i].value);
-
-                    // only one radio can be logically checked, don't check the rest
+                    puntuacion = puntuacion +4;
                     break;
                 }
             }
+
+            
+        }
+        //cookies
+		    mandarCookie("Puntuacion", puntuacion,null);
+		    location.href = "Resultado.html";
+        console.log(puntuacion);
         }
     </script>
 

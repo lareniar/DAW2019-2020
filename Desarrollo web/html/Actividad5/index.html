@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        sCadena = "  " + "kaixo" + "  ";
+        sCadena = "Plaiaundi";
         sCadena = sCadena.toUpperCase();
         colocado = true;
         CrearPalabra();
@@ -28,30 +28,7 @@
                 }
             }
         }
-        //coge sCadena y coloca por posicion
-        function ColocarPalabra() {
-            for (i = 0; i < sCadena.length; i++){
-                if (sCadena[i] == "Ñ") {
-                    document.getElementById(`sLetra${i}`).src = `resources/Blanco.gif`;
-                } else {
-                    if (sCadena[i] == " ") {
-                        document.getElementById(`sLetra${i}`).src = `resources/Blanco.gif`;
-                    } else {
-                        document.getElementById(`sLetra${i}`).src = `resources/${sCadena[i]}.gif`;
-                    }
-                }
-            }
-        }
-        //cambia de posicion la ultima letra de la palabra
-        function CambiarPalabra() {
-            iPos = sCadena.length;
-            sLetra = sCadena[iPos - 1];
-            sCadena = sLetra + sCadena.substr(0, iPos - 1);
-            ColocarPalabra();
-        }
-
-        setInterval(CambiarPalabra, 200);
-    </script>
+        </script>
 
 </body>
 

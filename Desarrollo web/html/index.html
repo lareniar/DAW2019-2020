@@ -5,77 +5,295 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <title>Hoja de Ejercicios</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+</head>
+<title>Document</title>
 </head>
 
-<body class="cuerpo">
-    <!-- HEADER-->
-    <h1>Curso 2019/2020</h1>
-    <!-- /HEADER-->
-    <!-- BODY -->
-    <div class="grid-container">
-        <div class="grid-item"><a href="Actividad1/index.html" target="_self">Actividad 1 <br> Inventos</a></div>
-        <div class="grid-item"><a href="Actividad2/index.html" target="_self">Actividad 2 <br> Sello</a></div>
-        <div class="grid-item"><a href="Actividad3/index.html" target="_self">Actividad 3 <br> Regresivo</a></div>
-        <div class="grid-item"><a href="Actividad4/index.html" target="_self">Actividad 4 <br> Reloj</a></div>
-        <div class="grid-item"><a href="Actividad5/index.html" target="_self">Actividad 5 <br> String - Imagenes</a></div>
-        <div class="grid-item"><a href="Actividad6/index.html" target="_self">Actividad 6 <br> Strings – Imágenes – Relojes</a></div>
-        <div class="grid-item"><a href="Actividad7/index.html" target="_self">Actividad 7 <br> Juego Ordenar Tabla</a></div>
-        <div class="grid-item"><a href="Juego_cartas/index.html" target="_self">Actividad 8 <br> Procedimental (con Endika)</a></div>
-        <div class="grid-item"><a href="Actividad9/index.html" target="_self">Actividad 9<br> Test</a></div>
-        <div class="grid-item"><a href="Examen/index.html" target="_self">Examen<br> Test</a></div>
+<body>
 
-</div>
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light py-0 py-md-0">
+        <a class="navbar-brand " href="index.html">
+            <p>Aritz Eguiguren</p>
+        </a>
+
+        <!--  Boton Inicio -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <p>Inicio</p> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+                <!--  Dropdown Trimestre1 -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link " data-toggle="dropdown" href="#" role="button">
+                        <p>Trimestre 1 </p></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Actividad1/index.html">Ejercicio 1</a>
+                        <a class="dropdown-item" href="Actividad2/index.html">Ejercicio 2</a>
+                        <a class="dropdown-item" href="Actividad3/index.html">Ejercicio 3</a>
+                        <a class="dropdown-item" href="Actividad4/index.html">Ejercicio 4</a>
+                        <a class="dropdown-item" href="Actividad5/index.html">Ejercicio 5</a>
+                        <a class="dropdown-item" href="Actividad6/index.html">Ejercicio 6</a>
+                        <a class="dropdown-item" href="Actividad7/index.html">Ejercicio 7</a>
+                        <a class="dropdown-item" href="Actividad8/index.html">Ejercicio 8</a>
+                        <a class="dropdown-item" href="Actividad8/index.html">Ejercicio 9</a>
+                    </div>
+                </li>
+
+                <!--  Dropdown Trimestre 2 -->
+                <li class="nav-item dropdown active">
+                    <a class="nav-link " data-toggle="dropdown" href="#" role="button">
+                        <p>Trimestre 2 </p></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Actividad1/index.html">Ejercicio 1</a>
+                        <a class="dropdown-item" href="Actividad2/index.html">Ejercicio 2</a>
+                        <a class="dropdown-item" href="Actividad3/index.html">Ejercicio 3</a>
+                        <a class="dropdown-item" href="Actividad4/index.html">Ejercicio 4</a>
+                        <a class="dropdown-item" href="Actividad5/index.html">Ejercicio 5</a>
+                        <a class="dropdown-item" href="Actividad6/index.html">Ejercicio 6</a>
+                        <a class="dropdown-item" href="Actividad7/index.html">Ejercicio 7</a>
+                        <a class="dropdown-item" href="Actividad8/index.html">Ejercicio 8</a>
+                        <a class="dropdown-item" href="Actividad8/index.html">Ejercicio 9</a>
+                    </div>
+                </li>
+                <!--  Boton GitHub -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="Documentos/cv.pdf"><p>Curriculum Vitae</p></a>
+                </li>
+                <!--  Boton CV -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://github.com/lareniar"><p>GitHub</p></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- /NAVBAR-->
+
+    <!-- CONTENT-->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad1/index.html">  Inventos </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio1.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad2/index.html"> Sellos </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad3/index.html"> Regresivo </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad4/index.html"> Reloj </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad5/index.html"> Strings - Imagenes </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad5.2/index.html"> Strings - Imagenes - Relojes </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad7/index.html"> Ordenar Tabla </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad8/index.html"> Actividad 8 </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad9d/index.html"> Actividad 9 </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-5">
+                <!-- Content -->
+                <h4 class="titulos">
+                    <a href="Actividad2/index.html">  Inventos0 </a>
+                </h4>
+                <p class="texto">En este ejercicio aprenderemos nociones básicas de JS como por ejemplo; colocar</p>
+            </div>
+            <div class="col-xl-7">
+                <!-- Content --><img src="resources/CapturaEjercicio2.png">
+            </div>
+        </div>
+    </div>
+    <!-- VIDEO-->
+
+    <!-- /CONTENT-->
+    <!-- FOOTER -->
+    <footer class="page-footer font-small dark-blue pt-4">
+
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <h5 class="text-uppercase">J.J. VÁZQUES INDUSTRIES</h5>
+                    <p>Todo este contenido pertenece a J.J. Vázquez, el autor de esta <br> página no se hace cargo de el
+                        mal uso de esta información</p>
+
+                </div>
+
+                <!-- LINKS -->
+                <div class="col-md-3 mb-md-0 mb-5">
+
+                    <h5 class="text-uppercase">RR.SS.</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a
+                                href="https://twitter.com/jjaviervazquez?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                                <img class="rrssFooter" src="resources/twitterlogo.png" alt="twitterlogo">
+                                <p>Twitter</p></img>
+                            </a>
+
+                            <a href="https://www.facebook.com/jorgejaviervazqueztv">
+                                <img class="rrssFooter" src="resources/fblogo.png" alt="twitterlogo">
+                                <p>Facebook</p>
+                            </a>
+                            <a href="https://www.facebook.com/jorgejaviervazqueztv">
+                                <img class="rrssFooter" src="resources/iglogo.png" alt="twitterlogo">
+                                <p>Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
 
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- /LINKS -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> jjvazquez.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- /FOOTER -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        setTimeout(ActivarSalvapantalla, 30000);
-        aColores = ["red", "yellow", "purple"];
-
-        function ActivarSalvapantalla() {
-            //contador generado para colocar cuadros
-            iContador = 0;
-            //array de colores ampliable
-            aColores = ["yellow", "red", "purple"];
-            reloj = setInterval(ColocarCuadrados, 1000);
-            //timeout para quitar savalapantalla
-            setTimeout(BorrarSalvapantalla, 60000);
-        }
-
-        function ColocarCuadrados() {
-            //coger posicion aleatoria de array de colores
-            sColor = aColores[Math.floor(Math.random() * aColores.length)];
-            //crear div
-            MiDiv = document.createElement("div");
-            //añadir id a div
-            MiDiv.setAttribute("id", `${"cuadrado" + iContador}`);
-            //opciones de posicion y tamaño
-            MiDiv.style.position = "absolute";
-            MiDiv.style.left = Math.floor(Math.random() * 100) + "%";
-            MiDiv.style.top = Math.floor(Math.random() * 100) + "%";
-            MiDiv.style.width = "100px";
-            MiDiv.style.height = "100px";
-            //añadir color al div
-            MiDiv.style.backgroundColor = sColor;
-            //añadir div a body
-            document.getElementsByTagName('body')[0].appendChild(MiDiv);
-            //numero para añadir una id diferente
-            iContador++;
-        }
-
-        function BorrarSalvapantalla() {
-            //finalizar funcion ColocarCuadros
-            clearInterval(reloj);
-            //remover todos los div
-            for (i = 0; i < iContador; i++) {
-                el = document.getElementById(`${"cuadrado" + i}`);
-                document.body.removeChild(el);
-
-            }
-        }
-    </script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

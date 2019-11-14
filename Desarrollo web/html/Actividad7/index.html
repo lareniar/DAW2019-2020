@@ -6,110 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UAç -Compatible" content="ie=edge">
     <script src="Juegos.js" charset="UTF-8"></script>
+    <script src="Cookies.js" charset="UTF-8"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Document</title>
 </head>
 
 <body>
     <script>
-        //cookies
-        console.log("Consultar cookie: " );
-        mandarCookie("Nivel", 2, dFecha);
         
-        switch (consultarCookie("Nivel")) {
-            case "0":
-                alert("Cookie 0");
-                break;
-            case "1":
-                alert("Cookie 1");
-                break;
-            case "2":
-                alert("Cookie 2");
-                break;
-            case "3":
-                alert("Cookie 3");
-                break;
-            default:
-                alert("Cookie 4");
-                break;
+        document.write(`<select id="dificultad">
+  <option value="1">Nivel 1</option>
+  <option value="2">Nivel 2</option>
+  <option value="3">Nivel 3</option>
+</select>`)
+
+
+        document.write(`<input type="button" id="bBotonDificultad" value="Cambiar Dificultad" onClick="CambiarDificultad()">`)
+        ConsultarCookie("Nivel");
+        dFecha = new Date();
+        //cookies
+        function CambiarDificultad() {
+            oDropDown = document.getElementById("dificultad");
+            value = oDropDown.options[oDropDown.selectedIndex].value;
+
+            suma = dFecha.getDay() + 10;
+            dFecha.setDate(suma);
+            mandarCookie("Nivel", value, dFecha);
+            ConsultarCookie();
+            
+        }
+
+        function ConsultarCookie() {
+            switch (consultarCookie("Nivel")) {
+                case "1":
+                    nivel = 3;
+                    break;
+                case "2":
+                    nivel = 4;
+                    break;
+                case "3":
+                    nivel = 5;
+                    break;
+                case "4":
+                    nivel = 6;
+                    break;
+                default:
+                    nivel = 3;
+                    break;
+            }
+            juego(nivel);
         }
         //Hacer un contador de clicks regresivo
         //un timer  n-1 al cuadrado
         //o victoria porque funciona 
-        n = 2;
-        i = 1;
-        aTabla = CrearTabla(n);
-        aTablaComprobacion = new Array;
 
-        //al cargar la página creamos una tabla con n filas y x columnas
-        document.write("<table>");
-        iFilaCero = n - 1;
-        iColumnaCero = n - 1;
-        for (let row = 0; row < n; row++) {
-            document.write("<tr>");
-            for (let column = 0; column < n; column++) {
+        
+        function juego(nivel) {
+            n = nivel;
+            iTotalClicks = 70;
+            iTiempo = 180;
+            reloj = setInterval(CuentaAtras, 1000);
+            i = 1;
+            click = true;
+            aTabla = CrearTabla(n);
+            aTablaComprobacion = new Array;
 
-                aTablaComprobacion.push(i);
-                i++;
-                document.write(
-                    `<td> <img id="imBola${row}${column}" src="./Numeros/n${aTabla[row][column]}.gif" onclick="Cambiar(${row}, ${column})"> </td>`
-                );
+            //al cargar la página creamos una tabla con n filas y x columnas
+            document.write(`<p id="totalclick"> Total de clicks ${iTotalClicks} </p>`)
+            document.write(`<p id="tiempo"> Total de tiempo ${iTiempo} </p>`)
+            document.write("<table>");
+            iFilaCero = n - 1;
+            iColumnaCero = n - 1;
+            for (let row = 0; row < n; row++) {
+                document.write("<tr>");
+                for (let column = 0; column < n; column++) {
 
+                    aTablaComprobacion.push(i);
+                    i++;
+                    document.write(
+                        `<td style="border: 1px solid black;"> <img id="imBola${row}${column}" src="./Numeros/n${aTabla[row][column]}.gif" onclick="Cambiar(${row}, ${column})"> </td>`
+                    );
+
+                }
+                document.write("</tr>");
             }
-            document.write("</tr>");
+
+            aTablaComprobacion[i - 2] = 0;
+            document.write("</table>");
         }
-
-        aTablaComprobacion[i - 2] = 0;
-        document.write("</table>");
-
         //funcion para cambiar imagenes de posicion
         function Cambiar(row, column) {
             //si el movimiento es posible
-            if ((row == iFilaCero && column + 1 == iColumnaCero) || (row == iFilaCero && column - 1 == iColumnaCero) ||
-                (column == iColumnaCero && row + 1 == iFilaCero) || (column == iColumnaCero && row - 1 == iFilaCero)) {
-                iNumeroAux = aTabla[row][column];
-                aTabla[row][column] = aTabla[iFilaCero][iColumnaCero];
-                aTabla[iFilaCero][iColumnaCero] = iNumeroAux;
-                document.getElementById(`imBola${row}${column}`).src = `./Numeros/n${aTabla[row][column]}.gif`
-                document.getElementById(`imBola${iFilaCero}${iColumnaCero}`).src =
-                    `./Numeros/n${aTabla[iFilaCero][iColumnaCero]}.gif`
-                iFilaCero = row;
-                iColumnaCero = column;
-                FinalizarJuego();
-            } else {
-                alert("imposible");
+            if (click) {
+                iTotalClicks--;
+                if ((row == iFilaCero && column + 1 == iColumnaCero) || (row == iFilaCero && column - 1 ==
+                        iColumnaCero) ||
+                    (column == iColumnaCero && row + 1 == iFilaCero) || (column == iColumnaCero && row - 1 ==
+                        iFilaCero)) {
+                    iNumeroAux = aTabla[row][column];
+                    aTabla[row][column] = aTabla[iFilaCero][iColumnaCero];
+                    aTabla[iFilaCero][iColumnaCero] = iNumeroAux;
+                    document.getElementById(`imBola${row}${column}`).src = `./Numeros/n${aTabla[row][column]}.gif`
+                    document.getElementById(`imBola${iFilaCero}${iColumnaCero}`).src =
+                        `./Numeros/n${aTabla[iFilaCero][iColumnaCero]}.gif`
+                    iFilaCero = row;
+                    iColumnaCero = column;
+                    FinalizarJuego();
+                } else {
+                    alert("No se puede hacer el movimiento");
+                }
+            }
+            document.getElementById("totalclick").innerHTML= `<p id="totalclick"> Total de clicks ${iTotalClicks} </p>`
+            
+            if (iTotalClicks==0){
+                alert("Te has quedado sin clicks");
+                click=false;
             }
         }
 
+
         function FinalizarJuego() {
             enumerado = false;
-            var indice = 0;
+            var indice = 1;
             for (let row = 0; row < aTabla.length; row++) {
                 for (let column = 0; column < aTabla.length; column++) {
-                    if (aTabla[row][column] == aTablaComprobacion[indice]) {
-
-
-                        enumerado = true;
-                        console.log("true");
+                    if (aTabla[row][column] == indice) {
+                        indice++;
                     } else {
-                        enumerado = false;
-                        break;
+                        row=n;
+                        column=n;
                     }
-
                 }
 
             }
-            if (enumerado) {
-                alert("has ganado");
-            } else {
-                alert("no has ganado")
+            if (indice == (n*n)) {
+                console.log("has ganado");
+                click = false;
             }
         }
 
         function mandarCookie(nombre, valor, caducidad) {
             document.cookie = nombre + "=" + escape(valor) + ((caducidad == null) ? "" : ("; expires=" + caducidad
                 .toGMTString()))
-                console.log("mandarCookie " );
+            console.log("mandarCookie ");
         }
 
         function consultarCookie(nombre) {
@@ -127,6 +166,22 @@
                 }
             }
         }
+
+        function CuentaAtras() {
+	iTiempo--;
+	if (iTotalClicks == 0) {
+		alert("Te has quedado sin clicks y has perdido");
+		clearInterval(reloj);
+	} else if (iTiempo == 0) {
+		bTiempo = false;
+		clearInterval(reloj);
+		document.getElementById("tiempo").innerHTML = "Tiempo:" + iTiempo;
+		alert("Se ha acabo la partida porque te has quedado sin tiempo")
+	} else {
+		document.getElementById("tiempo").innerHTML = "Tiempo:" + iTiempo;
+	}
+
+}
     </script>
 
 

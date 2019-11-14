@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <title>Hoja de Ejercicios</title>
+</head>
+
+<body class="cuerpo">
+    <!-- HEADER-->
+    <h1>Curso 2019/2020</h1>
+    <!-- /HEADER-->
+    <!-- BODY -->
+    <div class="grid-container">
+        <div class="grid-item"><a href="Actividad1/index.html" target="_self">Actividad 1 <br> Inventos</a></div>
+        <div class="grid-item"><a href="Actividad2/index.html" target="_self">Actividad 2 <br> Sello</a></div>
+        <div class="grid-item"><a href="Actividad3/index.html" target="_self">Actividad 3 <br> Regresivo</a></div>
+        <div class="grid-item"><a href="Actividad4/index.html" target="_self">Actividad 4 <br> Reloj</a></div>
+        <div class="grid-item"><a href="Actividad5/index.html" target="_self">Actividad 5 <br> String - Imagenes</a></div>
+        <div class="grid-item"><a href="Actividad6/index.html" target="_self">Actividad 6 <br> Strings – Imágenes – Relojes</a></div>
+        <div class="grid-item"><a href="Actividad7/index.html" target="_self">Actividad 7 <br> Juego Ordenar Tabla</a></div>
+        <div class="grid-item"><a href="Juego_cartas/index.html" target="_self">Actividad 8 <br> Procedimental (con Endika)</a></div>
+        <div class="grid-item"><a href="Actividad9/index.html" target="_self">Actividad 9<br> Test</a></div>
+        <div class="grid-item"><a href="Examen/index.html" target="_self">Examen<br> Test</a></div>
+
+</div>
+
+
+    <script>
+        setTimeout(ActivarSalvapantalla, 30000);
+        aColores = ["red", "yellow", "purple"];
+
+        function ActivarSalvapantalla() {
+            //contador generado para colocar cuadros
+            iContador = 0;
+            //array de colores ampliable
+            aColores = ["yellow", "red", "purple"];
+            reloj = setInterval(ColocarCuadrados, 1000);
+            //timeout para quitar savalapantalla
+            setTimeout(BorrarSalvapantalla, 60000);
+        }
+
+        function ColocarCuadrados() {
+            //coger posicion aleatoria de array de colores
+            sColor = aColores[Math.floor(Math.random() * aColores.length)];
+            //crear div
+            MiDiv = document.createElement("div");
+            //añadir id a div
+            MiDiv.setAttribute("id", `${"cuadrado" + iContador}`);
+            //opciones de posicion y tamaño
+            MiDiv.style.position = "absolute";
+            MiDiv.style.left = Math.floor(Math.random() * 100) + "%";
+            MiDiv.style.top = Math.floor(Math.random() * 100) + "%";
+            MiDiv.style.width = "100px";
+            MiDiv.style.height = "100px";
+            //añadir color al div
+            MiDiv.style.backgroundColor = sColor;
+            //añadir div a body
+            document.getElementsByTagName('body')[0].appendChild(MiDiv);
+            //numero para añadir una id diferente
+            iContador++;
+        }
+
+        function BorrarSalvapantalla() {
+            //finalizar funcion ColocarCuadros
+            clearInterval(reloj);
+            //remover todos los div
+            for (i = 0; i < iContador; i++) {
+                el = document.getElementById(`${"cuadrado" + i}`);
+                document.body.removeChild(el);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

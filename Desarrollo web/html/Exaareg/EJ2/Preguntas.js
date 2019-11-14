@@ -18,9 +18,9 @@ aSoluciones[2]="3";
 
 aPreguntas[3]="�Cual es la capital de Francia?";
 aRespuestas[3]=new Array("Ulan Bator","Donosti","Paris","Lisboa");
-aSoluciones[3]="2";
+aSoluciones[3]="4";
 
 aPreguntas[4]="�Cual es la capital de Francia?";
 aRespuestas[4]=new Array("Ulan Bator","Donosti","Paris","Lisboa");
-aSoluciones[4]="2";
+aSoluciones[4]="1";
 

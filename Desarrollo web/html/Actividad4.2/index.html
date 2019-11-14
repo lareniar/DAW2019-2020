@@ -5,14 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <button type="input" name="iniciar" onclick="regresiva()">Iniciar</button><br><br><br>
     <script>
+
+        numero=1;
+		if(localStorage.getItem("Visitas")==undefined){
+			localStorage.setItem("Visitas","1");
+		}else{
+			numero=localStorage.getItem("Visitas");
+			localStorage.Visitas=parseInt(numero)+1;
+		}
+        document.write(`<div> Esta es tu visita numero: ${numero}`)
+        document.write(`<div class="center">`)
         for (let i = 0; i < 4; i++) {
             document.write(`<img src="../Actividad4/resources/n0.gif" id="iPicture${i}">`)
         }
+        document.write(`</div>`)
         //funcion llamada desde el boton
         function regresiva() {
                 reloj = setInterval(CuentaAtras, 1000);
@@ -29,10 +41,12 @@
                 seg = "0" + seg;
             }
             console.log(min[1]);
+            
             document.getElementById("iPicture0").src = `../Actividad4/resources/n${min[0]}.gif`
             document.getElementById("iPicture1").src = `../Actividad4/resources/n${min[1]}.gif`
             document.getElementById("iPicture2").src = `../Actividad4/resources/n${seg[0]}.gif`
             document.getElementById("iPicture3").src = `../Actividad4/resources/n${seg[1]}.gif`
+            
 
             console.log(min);
 
