@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="EstilosBotones.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var sBusqueda;
+        document.addEventListener("mousedown",
+            function (event) {
+                (Botones(event))
+            }
+        )
+        function Botones() {
+            let sBoton;
+            switch (event.button) {
+                case 0:
+                    sBoton = "Izdo";
+                    break;
+                case 1:
+                    sBoton = "Centro";
+                    
+                    break;
+                case 2:
+                    sBoton = "Dcho";
+                    var sBusqueda = window.getSelection(); 
+
+                    document.getElementById("Menu").style.visibility="visible";
+                    document.getElementById("Menu").style.top=event.clientY +"px";
+                    document.getElementById("Menu").style.left=event.clientX + "px";
+                    document.getElementById("Boton").innerText = sBoton;
+                    yahoo.href +=  sBusqueda;
+                    bing.href +=  sBusqueda;
+                    google.href +=  sBusqueda;
+
+            }
+            
+        }
+
+        
+
+document.addEventListener( 'keydown', function ( e ) {
+    if ( e.keyCode === 27 ) { // ESC
+        document.getElementById("Menu").style.visibility="hidden";
+    }
+});
+        document.addEventListener("mousemove",
+            function (event) {
+                (Posicion(event) )
+            }
+        )
+
+        function Posicion(){
+            document.getElementById("Posicion").innerText= event.clientX + "-" + event.clientY;
+        }
+
+        document.addEventListener("contextmenu",
+        function(event){event.preventDefault()}
+        )
+    </script>
+    <p>
+        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio
+        mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de
+        las
+        letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen
+        parecerlo un español que se puede leer.
+        <p>
+            <div class="divBoton">
+                Botón Pulsado: <span id="Boton">?</span>
+            </div>
+            <div class="divPosicion">
+                Posición: <span id="Posicion">x - y</span>
+            
+            </div>
+            <div class="Menu" id="Menu">
+                    <a id="yahoo" class="item" href="https://es.search.yahoo.com/search?p=">Yahoo</a><br>
+                    <a id="bing" class="item" href="https://bing.com/search?q=">Bing</a><br>
+                    <a id="google" class="item" href="https://google.com/search?q=">Google</a>
+                </div>
+</body>
+
+</html>

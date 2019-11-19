@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="EstilosBotones.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <p id="MiParrafo">
+        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio
+        mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de
+        las
+        letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen
+        parecerlo un español que se puede leer.
+        <p>
+            <div id="Rueda" class="divBoton">
+                Rueda: <span id="Boton">?</span>
+            </div>
+            <script>
+                    document.getElementById("MiParrafo").addEventListener("wheel",
+                        function (event) {/*
+                            document.getElementById("Boton").innerText= 
+                            event.deltaY>0 ? "Bajar":"Subir";*/
+                            iSize=parseInt(this.style.fontSize)
+                            if (isNaN(iSize)) 
+                                iSize=14;
+                            iSize= event.deltaY < 0 ? iSize+2 : iSize-2;
+                            this.style.fontSize =iSize+"px";
+                        }
+                    );
+                </script>
+</body>
+
+</html>

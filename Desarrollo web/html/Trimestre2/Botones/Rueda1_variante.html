@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="EstilosBotones.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, beatae ratione dolor eligendi et laborum
+        consectetur quisquam voluptatem reprehenderit inventore, suscipit pariatur voluptates veniam dignissimos
+        officia, laudantium maxime exercitationem deserunt?</p>
+    <p>2Modi ullam accusantium nam ex tempora molestias dicta velit suscipit eaque nostrum maiores natus, illum itaque
+        distinctio earum, obcaecati excepturi facere rem. Neque nesciunt ratione perspiciatis enim architecto quos
+        dolor.</p>
+    <p>3Quis aliquid esse sed sint, harum, minima iusto suscipit voluptate veritatis eligendi labore? Dolorem commodi
+        repellat ut eligendi natus repudiandae? Corrupti officia laudantium deserunt alias neque quo sed maxime omnis.
+    </p>
+    <p>4Accusamus inventore cumque omnis, iste repellat autem excepturi minus porro tempora consequatur reiciendis vitae
+        quibusdam consectetur, delectus atque totam veritatis architecto ducimus obcaecati, neque nulla. Molestias
+        voluptatibus quo ipsa quos?</p>
+    <p>5Quod aliquam reprehenderit est. Quos laborum, voluptatem distinctio, vel magnam ipsa inventore, nulla odit
+        facilis eligendi sequi unde provident error omnis pariatur exercitationem assumenda magni ratione blanditiis?
+        Laboriosam, ex quis.</p>
+
+    <script>
+        pParrafos =document.getElementsByTagName("p");
+        for (pParrafo of pParrafos){
+            pParrafo.addEventListener("wheel",
+            function(event){
+                iSize = parseInt(this.style.fontSize)
+                if (isNaN(iSize))
+                    iSize = 14;
+                iSize = event.deltaY < 0 ? iSize + 2 : iSize - 2;
+                this.style.fontSize = iSize + "px";
+            }
+            )
+        };
+        document.getElementById("MiParrafo").addEventListener("wheel",
+            function (event) {
+                /*
+                                            document.getElementById("Boton").innerText= 
+                                            event.deltaY>0 ? "Bajar":"Subir";*/
+                iSize = parseInt(this.style.fontSize)
+                if (isNaN(iSize))
+                    iSize = 14;
+                iSize = event.deltaY < 0 ? iSize + 2 : iSize - 2;
+                this.style.fontSize = iSize + "px";
+            }
+        );
+    </script>
+</body>
+
+</html>
