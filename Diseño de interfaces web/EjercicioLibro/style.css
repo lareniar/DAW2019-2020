@@ -1,0 +1,127 @@
+/* 1024 */
+@media onlyscreen and (max-width:1024px) {
+header {width:8%; }
+}
+ 
+/* 768 */
+@media onlyscreen and (max-width:768px) {
+header {width:10%; }
+ 
+}
+ 
+/* 480 */
+@media onlyscreen and (max-width:480px) {
+ 
+.main {width:90%; }
+}
+/* 320 */
+@media onlyscreen and (max-width:320px) {
+ header {
+ width:15%;
+}
+}
+@font-face{
+  font-family:ninjanaruto;
+  src:url(/resources/njnaruto.ttf)
+}
+/* SLIDE HEADER & BODY */
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideShuriken {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  color: #22211b;
+}
+
+h1,h3,h4
+{
+  font-size: 3em;
+}
+#shuriken {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1.5s ease-out 0s 1 slideShuriken;
+  overflow: hidden;
+
+
+}
+
+.headerAnimation{
+  margin-left: 20%;
+  margin-top: 5em;
+  margin-bottom:1em;
+}
+#myAnimation > a{
+  color: rgb(0, 0, 0);
+}
+nav {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1.5s ease-out 0s 1 slideFromTop;
+  padding: 10px;
+  background: #fae586;
+}
+#top {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1.5s ease-out 0s 1 slideFromTop;
+
+  background: #000000;
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#top > p{
+  color: white;
+  margin: 0;
+}
+
+.main {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1.5s ease-out 0s 1 slideFromTop;
+
+  background: #F7B601;
+}
+
+.content {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1.5s ease-out 0s 1 slideFromTop;
+
+  background: #F7B601;
+}
+.titulo{
+  margin: 1em;
+  padding: 1em;
+}
+/* /SLIDE HEADER & BODY */
+
+nav{
+  text-align: center;
+  overflow: hidden;
+
+}
+nav > a{
+  padding-right: 1em;
+  text-decoration: none;
+
+}
+
+a:visited{
+  color: white;
+  
+
+}

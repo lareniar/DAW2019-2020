@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+</head>
+
+<script>
+    $(document).ready(function () {
+        $("#boton").click(function () {
+            $("p").toggle();
+
+        });
+        $("#botonA").click(function () {
+
+            $(".test").toggle();
+
+        });
+        $("#botonB").click(function () {
+
+            $("#test").toggle();
+
+        });
+    });
+</script>
+
+<body>
+
+    <p>Esto está en una etiqueta</p>
+    
+    <p>Esto está en una etiqueta 2</p> <br>
+    <button id="boton">Hide/Show </button>
+    <button id="botonA">Alternar</button>
+    <br><br> <div id="test">Div tipo id</div>
+
+    <div class="test">Div tipo clase</div>
+    
+   
+    <button id="botonB">Alternar</button>
+</body>
+
+</html>

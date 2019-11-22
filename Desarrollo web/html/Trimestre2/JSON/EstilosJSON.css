@@ -1,0 +1,35 @@
+*{
+    font-family: 'Consolas', Courier, monospace;
+    font-size:14px;
+}
+.divSelect {
+  font-size:24px;
+  width: 150px;
+  height: 40px;
+  border: 1px solid red;
+  position: absolute;
+  top:200px;
+  left:100px;
+}
+table{
+  border-collapse: 0;
+}
+tr,td{
+  border: 0.1em solid black;
+}
+.divDatos {
+  font-size:16px;
+  width: 450px;
+  height: 140px;
+  border: 1px solid blue;
+  position: absolute;
+  top:160px;
+  left:300px;
+  padding:12px;
+  display:block;
+}
+
+input[type="text"] {
+  margin-left:10%;
+  color:red;
+}

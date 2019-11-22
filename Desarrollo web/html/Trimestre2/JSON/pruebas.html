@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://185.60.40.210/DatosJSON.js"></script>
+    <link rel="stylesheet" href="EstilosJSON.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <div class="divSelect">
+                <select id="Lista"><option>Elige</option>    
+                    <script>
+                        oDatos=JSON.parse(DatosJSON)
+                        for (let i = 0; i < oDatos.length; i++) {
+                           document.write(`<option>${oDatos[i].nombre} `);
+                        }
+        
+                  </script>
+                  </select>
+                  </div>
+
+                  <div id="divDatos" class="divDatos">
+                        <label>Nombre </label><input type="text" id="Nombre" ></p>
+                        <label>Edad </label><input type="text" id="Edad"></p>
+                        <label>Ciudad </label><input type="text"id="Ciudad"></p>
+                        <button onclick="Grabar()">Grabar</button>
+                </div>
+
+        <script>
+            // sessionStorage.setItem("Datos", JSON.stringify(oDatos))
+
+            Lista.addEventListener("change",
+            function(event){
+                Colocar(this.selectedIndex)
+            })
+
+            function Colocar(iDato){
+                if (iDato == 0)
+                    alert("Elige un dato");
+                else{
+                    Nombre.value = oDatos[iDato -1]["nombre"];
+                    Edad.value = oDatos[iDato -1]["edad"];
+                    Ciudad.value = oDatos[iDato -1]["ciudad"];
+                }
+            }
+
+            function Grabar(){
+                iDato = Lista.selectedIndex;
+                console.log(iDato);
+                oDatos[iDato -1]["nombre"] = Nombre.value;
+                oDatos[iDato -1]["edad"] = Edad.value;
+                oDatos[iDato -1]["ciudad"] = Ciudad.value;
+            }
+            document.write("<table>");
+                    document.write("<tr><td>Nombre</td><td>Edad</td><td>Ciudad</td>");
+            for (let index = 0; index < oDatos.length; index++) {
+                document.write("<tr>");
+                    document.write(`<td>${oDatos[index]["nombre"]} </td>`)
+                    document.write(`<td>${oDatos[index]["edad"]} </td>`)
+                    document.write(`<td>${oDatos[index]["ciudad"]} </td>`)
+                    document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+    <!-- <script>
+        oDatos = JSON.parse(DatosJSON)
+        for (let index = 0; index < oDatos.length; index++) {
+            document.write(`<p> ${oDatos[index]["nombre"]} </p>`)
+            
+        }
+    
+        for (dato of oDatos){
+            document.write(`<p> ${dato["nombre"]} </p>`)
+        }
+    </script> -->
+</body>
+</html>
