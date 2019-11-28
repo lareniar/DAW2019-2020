@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(`<div class="wrap">`)
+        for (let index1 = 1; index1 < aNoticias.length; index1++) {
+
+            document.write(`<div class="divHeader${index1}">${aNoticias[index1][1]}</div>`)
+            document.write(`<div class="divContent${index1}">`)
+                
+            for (let index2 = 2; index2 < aNoticias.length; index2++) {
+                
+                if (index2 == 2)
+                document.write(`<div class="grid-item">${aNoticias[index1][index2]}</div>`);
+                if (index2 == 3)
+                document.write(`<div class="grid-item"><img href="${aNoticias[index1][index2]}"></div>`);
+            }
+            document.write(`</div>`)
+        }
+        document.write(`</div>`)
+
+
+        //JQUERY
+
+        $(document).ready(function () {
+            for (let index = 1; index < aNoticias.length; index++) {
+                $(`.divHeader${index}`).click(function () {
+                    for (let j = 1; j < aNoticias.length; j++) {
+                        $(`.divContent${j}`).slideUp(900);
+                    }
+                    if ($(`.divContent${index}`).is(':visible')) {
+                        $(`.divContent${index}`).slideUp();
+                    } else {
+                        $(`.divContent${index}`).slideDown(900);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
