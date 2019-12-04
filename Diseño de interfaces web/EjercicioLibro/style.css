@@ -71,12 +71,12 @@ nav {
   display: grid;
   grid-column-gap: 50px;
   grid-template-columns: auto auto auto;
-  background-color: rgba(29, 112, 105, 0.356);
+  background-color:rgb(228, 174, 178);
   padding: 10px;
 }
 
 .grid-item {
-  background-color:rgba(29, 112, 105, 0.328);
+  
   padding: 20px;
 
   text-align:center;
@@ -87,6 +87,11 @@ nav {
   width: 60%;
   height: 65%;
 
+}
+
+.imgGridHome:hover{
+  opacity: 0.85;
+  cursor: pointer;
 }
 
 .grid-item > div >{

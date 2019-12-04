@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .dCasn {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+        }
+
+        .dCasb {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+
+        td {
+            border: 1px solid;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var img = new Image();
+        img.id = "Caballo"
+        img.src = "Caballo.png";
+
+        $(document).ready(function () {
+
+            $('#44').append(img);
+            $('.dCasb,.dCasn').attr('draggable', true);
+
+            $(".dCasb,.dCasn").on("dragstart", function (event) {
+                if (this.children.length) {
+                    event.originalEvent.dataTransfer.setData('text', this.id);
+                } else {
+                    event.preventDefault();
+                }
+                console.log(this.id);
+            });
+
+            $(".dCasb,.dCasn").on("dragover", function (event) {
+                event.preventDefault();
+            })
+
+            $(".dCasb,.dCasn").on("dragenter", function (event) {
+                event.preventDefault();
+                console.log("enter");
+            })
+
+            $(".dCasb,.dCasn").on("dragleave", function (event) {
+                event.preventDefault();
+                console.log("leave");
+            })
+            $(".dCasb,.dCasn").on("drop", function (event) {
+                event.preventDefault();
+                console.log("Drop ID:" + this.id);
+                console.log("Event Original Drop: " + event.originalEvent.dataTransfer.getData('text'))
+                $('#Caballo').appendTo(this);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+
+    <script>
+        document.write(
+            ` <table style=" border:1px solid black;margin-left:30px;margin-top:30px;border-collapse:collapse;">`)
+        for (let row = 1; row < 9; row++) {
+            document.write("<tr>");
+            for (let column = 1; column < 9; column++) {
+                if (row % 2 != 0) {
+                    if (column % 2 != 0) {
+                        document.write(`<td><div class="dCasn" id="${row+""+column}"></div></td>`)
+                    } else {
+                        document.write(`<td><div class="dCasb" id="${row+""+column}"></div></td>`)
+                    }
+
+                } else {
+                    if (column % 2 != 0) {
+                        document.write(`<td><div class="dCasb" id="${row+""+column}"></div></td>`)
+                    } else {
+
+                        document.write(`<td><div class="dCasn" id="${row+""+column}"></div></td>`)
+                    }
+                }
+
+
+            }
+            document.write("</tr>");
+
+        }
+        document.write("</table>");
+    </script>
+
+    </table>
+
+
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="TestApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animales</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.getJSON("Datos.json", function (data, status) { leido(data, status) });
+            function leido(oJson, estado) {
+                aDatos = oJson.Personas;
+                for (let index = 0; index < aDatos.length; index++) {
+                    edad = parseInt(aDatos[index].Edad);
+                    if (edad >= 18)
+                        $("#Mayores").append(`<div class= "Mayores">${aDatos[index].Nombre}</div>`);
+                    else
+                        $("#Menores").append(`<div class= "Menores">${aDatos[index].Nombre}</div>`);
+                }
+             }
+        })
+    </script>
+</head>
+
+<body>
+    <div id="Mayores" style="position:absolute;left:10px;top:100px;width:150px;height:125px;border:1px solid blue"></div>
+    <div id="Menores" style="position:absolute;right:600px;top:100px;width:150px;height:125px;border:1px solid blue"></div>
+</body>
+
+</html>

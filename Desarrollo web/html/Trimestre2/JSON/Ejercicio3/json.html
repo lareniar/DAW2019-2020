@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="TestApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animales</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var oDiv;
+        $(document).ready(function () {
+            $.getJSON("Datos.json", function (data, status) {
+                leido(data, status)
+            });
+
+            function leido(oJson, estado) {
+                aDatos = oJson.Animales;
+                for (let index = 0; index < aDatos.length; index++) {
+                    clase = aDatos[index].Mamifero == "true" ? "M" : "P";
+                    $("#Animales").append(`<div class= "${clase}">${aDatos[index].Nombre}</div>`);
+                }
+                $(".M,.P").attr('draggable', true);
+                $(".M,.P").on("dragstart", function (event) {
+                    //necesario para que funcione en firefox
+                    event.originalEvent.dataTransfer.setData('text', this.id);
+                    event.dataTransfer.setDragImage(img);
+                    oDiv = this;
+                    img= "resources/pajaros.jpg";
+                    
+                    
+                });
+                $("#Pajaros").on("dragover", function (event) {
+                    event.preventDefault();
+                    
+                    if (oDiv.className == "M") {
+                        $("#Pajaros").css("background-color", "red");
+                        ç
+                        /*NUEVO poner cuadrado en blanco*/
+                        $("#Pajaros").on("dragleave", function (event) {
+                            event.preventDefault();
+                            $("#Pajaros").css("background-color", "white");
+                        })
+                    };
+                })
+
+                $("#Mamiferos").on("dragover", function (event) {
+                    event.preventDefault();
+                    if (oDiv.className == "P") {
+                        $("#Mamiferos").css("background-color", "red");
+                        ç
+                        /*NUEVO poner cuadrado en blanco*/
+                        $("#Mamiferos").on("dragleave", function (event) {
+                            event.preventDefault();
+                            $("#Mamiferos").css("background-color", "white");
+                        })
+                    };
+                })
+                $("#Pajaros").on("dragleave", function (event) {
+                    event.preventDefault();
+                    $("#Pajaros").css("background-color", "white");
+                })
+
+                $("#Mamiferos").on("dragleave", function (event) {
+                    event.preventDefault();
+                    $("#Mamiferos").css("background-color", "white");
+                })
+
+                $("#Pajaros").on("drop", function (event) {
+                    SoltarPajaro(event)
+                })
+
+                $("#Mamiferos").on("drop", function (event) {
+                    SoltarMamifero(event)
+                })
+            }
+        })
+
+        function SoltarPajaro(event) {
+            if (oDiv.className == "P") {
+                $(oDiv).appendTo("#Pajaros");
+            } else {
+                /*poner cuadrado en blanco*/
+                $("#Pajaros").css("background-color", "white")
+            };
+
+        }
+
+        function SoltarMamifero(event) {
+            if (oDiv.className == "M") {
+                $(oDiv).appendTo("#Mamiferos");
+            } else {
+                /*poner cuadrado en blanco*/
+                $("#Pajaro").css("background-color", "white")
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Animales" style="position:absolute;left:10px;top:100px;width:150px;height:125px;border:1px solid blue">
+    </div>
+    <div id="Pajaros" style="position:absolute;left:180px;top:50px;width:150px;height:100px;border:1px solid green">
+    </div>
+
+    <div id="Mamiferos" style="position:absolute;left:180px;top:200px;width:150px;height:100px;border:1px solid green">
+    </div>
+</body>
+
+</html>
