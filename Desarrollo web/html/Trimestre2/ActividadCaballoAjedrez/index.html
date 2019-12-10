@@ -12,36 +12,54 @@
             width: 50px;
             height: 50px;
             background-color: white;
+            max-height: 350px;
+
         }
 
         .dCasb {
             width: 50px;
             height: 50px;
+            max-height: 350px;
+
             background-color: aquamarine;
         }
 
         td {
             border: 1px solid;
         }
+
+        img {
+            max-width: 100%;
+            position: relative;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         var img = new Image();
-        img.id = "Caballo"
-        img.src = "Caballo.png";
-
+        ficha = elegirFicha()
+        img.id = ficha
+        img.src = ficha + ".png";
+        colorPista = "rgb(255, 255, 0)"
         $(document).ready(function () {
 
             $('#44').append(img);
             $('.dCasb,.dCasn').attr('draggable', true);
-
             $(".dCasb,.dCasn").on("dragstart", function (event) {
                 if (this.children.length) {
                     event.originalEvent.dataTransfer.setData('text', this.id);
+                    sNumCasilla = this.id;
+                    //pos           icion 1
+                    iFila = parseInt(sNumCasilla.charAt(0))
+                    //pos   icion 2
+                    iColumna = parseInt(sNumCasilla.charAt(1))
+                    PosiblesMovimientos("dragstart", ficha);
+                      ca
+                    ac
+
+                    AudioParamMap
                 } else {
                     event.preventDefault();
                 }
-                console.log(this.id);
             });
 
             $(".dCasb,.dCasn").on("dragover", function (event) {
@@ -50,21 +68,69 @@
 
             $(".dCasb,.dCasn").on("dragenter", function (event) {
                 event.preventDefault();
-                console.log("enter");
+                // console.log("DragEnter: " + $(this).css('backgroundColor'));
             })
 
             $(".dCasb,.dCasn").on("dragleave", function (event) {
                 event.preventDefault();
-                console.log("leave");
+                // console.log("leave");
             })
+
             $(".dCasb,.dCasn").on("drop", function (event) {
                 event.preventDefault();
-                console.log("Drop ID:" + this.id);
-                console.log("Event Original Drop: " + event.originalEvent.dataTransfer.getData('text'))
-                $('#Caballo').appendTo(this);
+
+                if ($(this).css('backgroundColor') == colorPista) {
+                    $("#" + ficha).appendTo(this);
+                    PosiblesMovimientos("drop", ficha);
+                } else {
+                    PosiblesMovimientos("drop", ficha);
+                }
+
+                // console.log("Drop ID:" + $(this).css('backgroundColor'));
+                // console.log("Event Original Drop: " + event.originalEvent.dataTransfer.getData('text'))
+
             });
 
         });
+        //input elegir ficha, multiples valores segun el nombre de las imagenes en /resources
+        function elegirFicha() {
+            var x;
+            var ficha = prompt("Inserta la ficha a mover. Escribe una(1) de las siguientes: Caballo, Alfil");
+            if (ficha != null) {
+                return ficha;
+            }
+        }
+
+        function PosiblesMovimientos(value, ficha) {
+            if (value == "dragstart") {
+                color = "yellow";
+            }
+            if (value == "drop") {
+                color = "";
+            }
+            //movimientos de caballo
+            if (ficha == "Caballo") {
+                $("#" + (iFila - 2) + "" + (iColumna - 1)).css('background', color);
+                $("#" + (iFila - 2) + "" + (iColumna + 1)).css('background', color);
+                $("#" + (iFila - 1) + "" + (iColumna - 2)).css('background', color);
+                $("#" + (iFila - 1) + "" + (iColumna + 2)).css('background', color);
+                $("#" + (iFila + 2) + "" + (iColumna - 1)).css('background', color);
+                $("#" + (iFila + 2) + "" + (iColumna + 1)).css('background', color);
+                $("#" + (iFila + 1) + "" + (iColumna - 2)).css('background', color);
+                $("#" + (iFila + 1) + "" + (iColumna + 2)).css('background', color);
+            }
+
+            //movimientos de alfil
+            if (ficha == "Alfil") {
+                for (let index = 1; index < 9; index++) {
+                    $("#" + (iFila - index) + "" + (iColumna - (index))).css('background', color);
+                    $("#" + (iFila + index) + "" + (iColumna + (index))).css('background', color);
+                    $("#" + (iFila + index) + "" + (iColumna - (index))).css('background', color);
+                    $("#" + (iFila - index) + "" + (iColumna + (index))).css('background', color);
+                }
+            }
+
+        }
     </script>
 </head>
 
@@ -79,24 +145,21 @@
             for (let column = 1; column < 9; column++) {
                 if (row % 2 != 0) {
                     if (column % 2 != 0) {
-                        document.write(`<td><div class="dCasn" id="${row+""+column}"></div></td>`)
+                        document.write(`<td><div class="dCasn" id="${row + "" + column}"></div></td>`)
                     } else {
-                        document.write(`<td><div class="dCasb" id="${row+""+column}"></div></td>`)
+                        document.write(`<td><div class="dCasb" id="${row + "" + column}"></div></td>`)
                     }
-
                 } else {
                     if (column % 2 != 0) {
-                        document.write(`<td><div class="dCasb" id="${row+""+column}"></div></td>`)
+                        document.write(`<td><div class="dCasb" id="${row + "" + column}"></div></td>`)
                     } else {
 
-                        document.write(`<td><div class="dCasn" id="${row+""+column}"></div></td>`)
+                        document.write(`<td><div class="dCasn" id="${row + "" + column}"></div></td>`)
                     }
                 }
 
-
             }
             document.write("</tr>");
-
         }
         document.write("</table>");
     </script>
