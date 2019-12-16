@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+
+        </div>
+    </header>
+
+
+    <button onclick="playVid()" type="button">Play Video</button>
+    <button onclick="pauseVid()" type="button">Pause Video</button>
+    <button onclick="nextVid()" type="button">Next Video</button><br>
+
+    <video id="myVideo" width="320" height="176">
+        <source src="resources/1.mp4" type="video/mp4">
+        No soportado
+    </video>
+
+    <script>
+        var vid = document.getElementById("myVideo");
+        var source = document.getElementsByTagName("source");
+        var videos = ["1.mp4", "2.flv",
+            "3.ogg",
+            "4.webm"
+        ]
+        var contador = 0;
+        vid.src = "resources/" + videos[contador];
+
+        function playVid() {
+            vid.play();
+        }
+        function pauseVid() {
+            vid.pause();
+        }
+        function nextVid() {
+            contador++;
+            if (contador == videos.length)
+                contador = 0;
+
+            vid.src = "resources/" + videos[contador];
+        }
+    </script>
+
+</body>
+
+</html>

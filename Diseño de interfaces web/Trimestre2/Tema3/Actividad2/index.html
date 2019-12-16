@@ -7,6 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    <style>
+        #play {
+            background-image: url('resources/play.png');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+
+        #pause {
+            background-image: url('resources/stop.png');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+
+        #forward {
+            background-image: url('resources/forward.png');
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+        }
+
+        .content{
+    position: relative;
+    align-content: right;
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -17,19 +47,11 @@
     </header>
 
     <div class="content">
-        <script>
-        function cancion(play){
-            document.getElementById('audio').${value}();
-        }
-        </script>
         <audio id="audio">
             <!-- array de posiciones por cancion -->
             <source src="resources/Red Hot Chili Peppers.mp3" type="audio/mp3">
         </audio>
 
-
-        <button onclick="cancion(play)">Play</button>
-        <button onclick=cancion(play)>Pause</button>
         <!-- <a class="playbutton" href="google.es"><img src="resources/rewind.png" alt="play"></a>
 
         <a class="playbutton" href="google.es"><img src="resources/play.png" alt="play"></a>
@@ -37,6 +59,41 @@
 
         <a class="playbutton" href="google.es"><img src="resources/forward.png" alt="play"></a> -->
 
+        <button id="play" onclick="playVid()" type="submit">Play Song</button>
+        <button id="pause" onclick="pauseVid()" type="submit">Pause Song</button>
+        <button id="forward" onclick="nextVid()" type="submit"></button><br>
+
+        <script>
+            var audio = document.getElementById("audio");
+            var source = document.getElementsByTagName("source");
+            var audios = ["AC-DC.mp3", "Aretha.mp3", "Bob Marley.mp3", "Red Hot Chili Peppers.mp3"]
+            var contador = 0;
+            audio.src = "resources/" + audios[contador];
+
+            function playSong() {
+                audio.play();
+            }
+
+            function pauseSong() {
+                audio.pause();
+            }
+
+            function nextSong() {
+                contador++;
+                if (contador == audios.length)
+                    contador = 0;
+                audio.src = "resources/" + audios[contador];
+                audio.play();
+            }
+
+            function prevSong() {
+                contador--;
+                if (contador < 0)
+                    contador = audios.length;
+                audio.src = "resources/" + audios[contador];
+                audio.play();
+            }
+        </script>
 
     </div>
 

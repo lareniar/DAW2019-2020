@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+
+div#body  /*Define una identificador "body" asociado a un elemento <div>. Es la posici�n del cuerpo de la p�gina (barra lateral m�s contenido) */
+{
+margin:auto auto auto auto;  /* top right bottom left: equivale a poner un s�lo auto */
+width:710px; /* El ancho del estilo lo coloca en 710px */
+clear:left; /*En el body quito el flotante para que la siguiente caja quede debajo */
+}
+div#header /*Define una identificador "header" asociado a un elemento <div>. Es la posici�n de la cabecera */
+{
+margin:auto auto auto auto;
+width:710px;
+border:solid 3px #815608;
+border-radius: 15px; /*borde redondeado de radio 15px */
+}
+div#sidebar
+{
+display:none; /*este div no lo hace visible */
+border:solid 1px #CFC;
+padding-left:15px; /*Se modifica el ancho*/
+}
+body.sidebar-main div#footer  /*Define una identificador "footer" asociado a un elemento <div>. Es la posici�n del pie de p�gina */
+{
+margin:25px auto 25px auto;
+width:710px;
+border:solid 3px #815608;
+border-radius: 15px; /*borde redondeado de radio 15px */
+clear:right;/* Ya que el div encima es tipo float:right, es necesario decirle ahora que coloque este div cuando no hay ning�n div que este flotando a la derecha */
+}
+
+body.main-sidebar div#footer /*Define una identificador "footer" asociado a un elemento <div>. Es la posici�n del pie de p�gina */
+{
+margin:15px auto 15px auto;
+
+width:710px;
+border:solid 3px #815608;
+border-radius: 15px; /*borde redondeado de radio 15px */
+clear:left;/* Ya que el div encima es tipo float:left, es necesario decirle ahora que coloque este div cuando no hay ning�n div que este flotando a la izquierda*/
+}
+
+
+
+body.main-sidebar div#main, body.sidebar-main div#main
+{
+width:490px;
+border:solid 4px green;
+
+}
+body.main-sidebar div#body, body.sidebar-main div#body
+{
+margin:auto auto auto auto;
+width:710px;
+border:solid 4px #FFF;
+}
+
+
+body.main-sidebar div#sidebar, body.sidebar-main div#sidebar
+{
+padding-top:10px;
+display:block;
+width:200px;
+border:solid 1px #CCC;
+}
+body.main-sidebar div#main, body.main-sidebar div#sidebar  /*Main-sidebar. Este estilo coloca el sidebar a la derecha y el main a la izquierda */
+{
+float:left;
+border:dotted 1px green;
+}
+body.sidebar-main div#main, body.sidebar-main div#sidebar /*Sidebar-main. Este estilo coloca el sidebar a la izquierda y el main a la derecha*/
+{
+float:right;
+border:dotted 1px green;
+}
+div#header div#logo /*Se define el logo flotante a la izquierda*/
+{
+margin-bottom:inherit;
+border:dotted 1px green;
+float:left; /*Hago estas caja flotante, y las siguientes cajas que est�n en la misma posici�n tambi�n ser�m flotantes a la izquierda. No hace falta ponerle a div#header div#main-title tambi�n eta propiedad*/
+
+}
+div#header div#main-title /*Es el t�tulo del encabezado. Al ser el logo flotante este tambi�n lo ser� */
+{
+width:600px;
+margin-bottom:inherit;
+border:dotted 1px blue;
+padding-bottom:10px;
+
+/* DEFINE LOS ENLACES DE MEnU*/
+}
+a.menus:link 
+{text-decoration:none; 
+color:#000000;
+background-color:#815608;
+border:#FFFFFF 1px solid;
+} /* Link no visitado*/
+
+a.menus:visited {
+text-decoration:none; 
+color:#cccccc;
+} /*Link visitado*/
+
+a.menus:active {
+text-decoration:none; 
+color: #003399; 
+background: green; 
+border:#FFFFFF 1px solid;
+} /*Link activo*/
+
+a.menus:hover {
+text-decoration:underline; 
+color: #003399; 
+background: red; 
+border:#FFFFFF 1px solid;} 
+/*Rat�n sobre el link*/
+
+
+#play {
+            background-image: url('resources/Play1Normal.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #pause {
+            background-image: url('resources/pause.jpg');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #forward {
+            background-image: url('resources/right.jpg');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #backward {
+            background-image: url('resources/left.jpg');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #volUp {
+            background-image: url('resources/VolumeNormal.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #volDown {
+            background-image: url('resources/VolumeNormalRed.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        .content {
+            position: relative;
+            text-align: right;
+        }
+
+</style>
+</head>
+
+<body class="sidebar-main">
+<div id="header">
+<div id="logo"> <img src="resources/micro.jpg" width="50px" height="90px"></img> </div>
+
+<div id="main-title"><h1> Radio patio </h1></div>
+
+<div class="content">
+
+<button id="backward" onclick="prevSong()" type="submit"></button>
+
+<button id="play" onclick="playSong()" type="submit"></button>
+<button id="pause" onclick="pauseSong()" type="submit"></button>
+
+<button id="forward" onclick="nextSong()" type="submit"></button>
+
+<button id="volUp" onclick="volUp()" type="submit"></button>
+<button id="volDown" onclick="volDown()" type="submit"></button>
+</div>
+
+<audio id="audio">
+        <source src="resources/Red Hot Chili Peppers.mp3" type="audio/mp3">
+    </audio>
+<p>&nbsp;</p>
+</div>
+
+<div id="body">
+    
+<div id="main"><img src="resources/micro.jpg" width="400px" height="400px"> </div>
+
+<div id="sidebar">
+<div><a href="#" class="menus">Inicio</a></div>
+<div><a href="#" class="menus">�D�nde Estamos?</a></div>
+<div><a href="#" class="menus">Nuestros programas</a></div>
+<div><a href="#" class="menus">Programaci�n</a></div>
+
+ </div>
+
+</div>
+
+
+<div id="footer">Pie de p�gina</div>
+
+
+
+</body>
+
+
+<script>
+        var audio = document.getElementById("audio");
+        var source = document.getElementsByTagName("source");
+        var audios = ["AC-DC.mp3", "Aretha.mp3", "Bob Marley.mp3", "Red Hot Chili Peppers.mp3"]
+        var contador = 0;
+        audio.src = "resources/" + audios[contador];
+
+        function playSong() {
+            audio.play();
+        }
+
+        function pauseSong() {
+            audio.pause();
+        }
+
+        function nextSong() {
+            contador++;
+            if (contador == audios.length)
+                contador = 0;
+            audio.src = "resources/" + audios[contador];
+            audio.play();
+        }
+
+        function prevSong() {
+            contador--;
+            if (contador < 0)
+                contador = audios.length;
+            audio.src = "resources/" + audios[contador];
+            audio.play();
+        }
+
+        function volUp() {
+            vid.volume= 1;
+        }
+
+        function volDown() {
+         vid.volume =0;
+        }
+
+
+    </script>
+
+
+</html>

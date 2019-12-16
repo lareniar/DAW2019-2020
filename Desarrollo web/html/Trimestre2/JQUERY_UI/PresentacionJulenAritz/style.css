@@ -1,0 +1,45 @@
+.container{
+    text-align: center;
+}
+
+.datepicker{
+    width: 9.7em;
+    text-align: center;
+}
+.container-item{
+    display: inline-block;
+    margin: 1em;
+}
+.texto{
+    font-family: 'Gelasio', serif;
+    font-style: italic;
+
+    display: inline-block;
+    padding: 1em;
+    max-width: 60em;
+    background: rgb(206, 222, 230);
+}
+
+.titulo{
+    display: inline-block;
+    margin: 1em;
+    font-family: 'Gelasio', serif;
+}
+
+body{
+    background-color: rgb(228, 243, 248);
+}
+
+select{
+    height: 2em;
+    width: 15em;
+    font-family: 'Gelasio', serif;
+    background-color: rgba(139, 218, 66, 0.582);
+    -webkit-appearance: none;
+    border-radius: 1em;
+}
+
+select:focus {
+    border: 1em;
+    background-color: rgba(140, 218, 66, 0.363);
+  }
