@@ -1,0 +1,293 @@
+/* variables */
+
+:root {
+    --header-separator-color: #177E89; 
+    --text-color: #323031; 
+  }
+/* /variables */
+*{
+    color:var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+}
+body{
+    margin: 0;
+}
+a, a:focus, a:active a:visited {
+    text-decoration:none;
+    color:var(--text-color);
+}
+a:hover {
+    text-decoration:none;
+}
+ 
+.portada{ /* background del menú cuando hover */
+    position: absolute;
+    background-color: rgb(19, 19, 19);
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    display:none;
+    bottom:0px;
+    right: 0;
+}
+
+.header{
+    display:flex;
+    margin: 0;
+    height: 8em;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 5px 6px black;
+margin-bottom: 140px;
+    
+    background: rgba(255,255,255,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+
+}
+
+.headerLogo{
+    
+    flex-grow: 1;
+    overflow: inherit;
+}
+
+.headerLinks{
+    padding-right:2em;
+    padding-bottom: auto;
+    align-content:bottom;
+}
+
+.headerLinks > a{
+    position: relative;
+    flex-grow: 1;
+    padding-right:0.2em;
+    padding-left:0.2em;
+    top:2.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.90em;
+    text-shadow: 0.4px 0.5px 1px; 
+}
+
+.escudoheader{
+    width:6em;
+    margin-left: 3em;
+    
+}
+
+/* /HEADER */
+
+/* BODY */
+.bodyContainer{
+   padding-top: 8.5em;
+}
+
+.AlbarracinPortada{
+    -webkit-box-shadow: 0px 47px 132px -101px rgba(24,48,1,0.92);
+    -moz-box-shadow: 0px 47px 132px -101px rgba(24,48,1,0.92);
+    box-shadow: 0px 47px 132px -101px rgba(24,48,1,0.92);
+    width: 100%;
+
+}
+
+.ImagenAlbarracin{
+    width: 100%;
+    height: 800px;
+    
+    position: absolute;
+}
+
+.bodyContainer{
+    display:flex;
+    flex-direction: column;
+}
+
+.CitaIndex{
+    width: 80%;
+    margin: 70px auto;
+    text-justify: center;
+}
+
+.CitaIndex>p{
+
+   font-size: 35px;
+}
+
+
+  /*imagenes del carrusel*/
+  #portada2, #portada3{
+    display: none;
+  }
+  /* container de las imagnes del carrusel*/
+  .AlbarracinPortada{
+    position: relative;
+    width: 100%;
+    height: 800px;
+  }
+
+  /*sobre nosotros*/
+    #tabs{
+        width: 90%;
+        
+    }
+    #tabs ul {
+        list-style-type: none;
+        display: flex;
+        margin-left: 20%;
+    }
+    #tabs ul li{
+        padding: 2%;
+        width: 200px;
+        margin-left:5%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5%;
+        border: 2px solid rgb(107, 107, 107);
+    }
+    #tabs ul li:hover{
+        background-color: rgba(0, 0, 0, 0.452);
+        box-shadow:2px 2px 10px 8px rgb(255, 255, 153);
+    }
+    #tabs ul li a{
+        color: white;
+    }
+    #tab-Historia{
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/HDR_-_Albarrac%C3%ADn_1.jpg/1024px-HDR_-_Albarrac%C3%ADn_1.jpg');
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        padding:2%;
+    }
+    #tab-Actualidad{
+        background-image: url('https://pbs.twimg.com/media/EKD4S4pWkAA1riD.jpg');
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        padding:2%;
+    }
+    #tab-Tradiciones{
+        background-image: url('https://aragonizate.files.wordpress.com/2015/10/aragon-canta-y-baila.jpg');
+        background-repeat:no-repeat;
+        padding:2%;
+        background-size: 100% 100%;
+        height: 300px;
+    }
+    #tabs p{
+        color: rgb(252, 220, 41);
+        text-shadow: 2px 2px 1px rgb(22, 22, 22);
+        margin:2% ;
+    }
+    #imgIzquierda{
+        float: left;
+        margin:1%;
+    }
+    #imgDerecha{
+        float: right;
+        margin:1%;
+    }
+
+    /*turismo*/
+    .turismo{
+        padding: 2%;
+    }
+    .btnTurismo{
+        padding: 2%;
+    }
+    .btnTurismo button{
+        padding: 2%;
+        border: 2px solid;
+        border-radius: 5%;
+        background-color: rgba(0, 76, 139, 0.37);
+        
+    }
+    .btnTurismo button:hover{
+        background-color: rgba(0, 76, 139, 0.815);
+        color: white;
+    }
+    .divGrid{
+        padding: 2%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: auto ;
+        grid-gap: 15px;
+        xpadding-left: 10%;
+        background-color: #084C61;
+        width: 60%;
+    }
+    .divGrid img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .gridItem div{
+        background-color: rgb(92, 167, 175);
+        padding:1%;
+        width: 200px;
+        height: 200px;
+        border-radius: 5%;
+    }
+    .divTexto{
+        position: absolute;
+        z-index: 999;
+        display: none;
+    }
+    .gridItem p{
+        color:white;
+    }
+
+    /*contacto*/
+    .contacto{
+        margin-left: 40%;
+        padding:2%;
+        background-color:rgb(252, 220, 41);
+        width: 25%;
+    }
+    .contacto form input, .contacto form textarea{
+        border: none;
+        border-bottom: 2px solid rgb(172, 172, 172);
+        xbackground-color: rgb(252, 220, 41);
+    }
+
+
+  /*footer*/
+  .footer{
+    display:flex;
+    margin: 0;
+    
+    height: 8em;
+
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgb(224, 221, 34) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(224, 221, 34)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1b939e', GradientType=1 );
+    
+}
+
+
+/* MEDIA */
+
+
+@media only screen and (max-width: 895px) {
+    .headerLinks > a{
+        visibility: hidden;
+    
+    }
+
+    .header{
+        display:flex;
+        margin: auto;
+        width: 98%;
+        height: 7em;
+        border-bottom: none;
+    }
+  }

@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Documento sin título</title>
+
+    <style>
+    table, td, tr{
+        border: 4px solid rgb(0, 68, 131);
+        border-collapse: collapse;
+        margin: 10px;
+        padding: 1em;
+    }
+    img{
+        height: 65px;
+    }
+        </style>
+</head>
+
+<script>
+    function GetPartidos() {
+        var xmlhttp;
+        var iConcejales = 20;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange =
+
+            function ()
+
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.body.innerHTML = " ";
+                jResponse = JSON.parse(xmlhttp.responseText)
+
+                tabla = '<table><td>Partidos</td><td>Votos</td><td>Concejales</td>'
+
+                for (let i = 0; i < jResponse.length; i++) {
+                    
+                    tabla += `<tr><td>${jResponse[i]["Partido"]}</td>`
+                    tabla += `<td>${jResponse[i]["Votos"]}</td>`
+                    tabla += `<td>${iConcejales}</td></tr>`
+
+                    if (i<=1 )
+                        iConcejales = iConcejales/2
+                    else
+                        iConcejales = ""
+                    
+                    
+                }
+                
+                tabla += "</table>"
+
+                tabla += `<p>ALCALDE</p> <img src="Partidos/${jResponse[0]["Partido"]}.jpg" alt="">`
+                document.body.innerHTML =tabla;
+
+
+               
+            }
+
+        }
+        
+        xmlhttp.open("GET", "elecciones.php");
+
+        xmlhttp.send();
+        setTimeout(GetPartidos, 5000)
+    }
+</script>
+
+<body>
+    
+    <script>GetPartidos()</script>
+    
+</body>
+
+</html>

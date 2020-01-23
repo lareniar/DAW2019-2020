@@ -14,7 +14,7 @@
 
   <script src="data.js"></script>
   <script src="Cookies.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
   <!-- LANGUAGES DATEPICKER -->
   <script src="i18n/datepicker-ar.js"></script>
@@ -29,15 +29,16 @@
 
 
   <script>
+    function inline() {
+      var $date = $(".inlinedate").datepicker('getDate');
+      $("#datepicker4").datepicker("setDate", $date);
+    }
     $(function () {
-      //all is date
+      //inline
       $(".inlinedate").datepicker($.datepicker.regional["es"], {
         dateFormat: "dd-mm-yy",
 
-
       });
-      var $date = $(".inlinedate").datepicker('getDate');
-      $("#datepicker4").datepicker("setDate", $date);
 
       //all is date
       $(".datepicker").datepicker($.datepicker.regional["es"], {
@@ -106,35 +107,6 @@
         //$( "#datepicker11" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
       });
 
-      //date change
-      var dateFormat = "mm/dd/yy"
-      $("#daterange").on("change", function () {
-        from = $( "#from" )
-        .datepicker({
-
-          changeMonth: true,
-          numberOfMonths: 1
-        })
-        .on( "change", function() {
-          to.datepicker( "option", "minDate", getDate( this ) );
-        }),
-        
-        $("#from").datepicker("option", " defaultDate:", "+1W");
-        $("#from").datepicker("option", " changeMonth:", "true");
-        $("#from").datepicker("option", " defaultDate:", "+1W");
-       
-      };
-  
-      function getDate( element ) {
-      var date;
-      try {
-        date = $.datepicker.parseDate( dateFormat, element.value );
-      } catch( error ) {
-        date = null;
-      }
- 
-      return date;
-    }
 
       //week of the year
       $("#weekoftheyear").on("change", function () {
@@ -154,9 +126,9 @@
     //cookies
     function enviarFecha(campo) {
       var dFecha = new Date()
+      dFecha.setMonth(dFecha.getMonth() + 1);
       mandarCookie("Fecha", campo, dFecha);
-      alert(campo)
-      location.href = "prueba.html";
+      location.href = "index_menu.html";
 
     }
 
@@ -175,7 +147,7 @@
         document.write(`
         <br>
         <br>
-        <select id="anim">
+        <select class="select" id="anim">
           <option value="show">Show (default)</option>
           <option value="slideDown">Slide down</option>
           <option value="fadeIn">Fade in</option>
@@ -194,7 +166,7 @@
         document.write(`
         <br>
         <br>
-        <select id="othermonths">
+        <select class="select" id="othermonths">
           <option value="">Without Other Months</option>
           <option value="true">Other Months</option>
        </select>`)
@@ -205,14 +177,16 @@
         document.write(`
         <br>
         <br>
-        <select id="buttonbar">
+        <select class="select" id="buttonbar">
           <option value="">Disable Button</option>
           <option value="true">Enable Button</option>
        </select>`)
       }
 
       if (index == 4) {
-        document.write(`<div class="inlinedate"></div>`)
+        document.write(`<div class="inlinedate"></div>
+          <input type="button" onclick="inline()" value="GetDate">`)
+
       }
 
       //month and year selectable
@@ -220,7 +194,7 @@
         document.write(`
         <br>
         <br>
-        <select id="selectmonth">
+        <select class="select" id="selectmonth">
           <option value="">Disable Month & Year</option>
           <option value="true">Enable Month & Year</option>
        </select>`)
@@ -231,11 +205,11 @@
         document.write(`
         <br>
         <br>
-        <select id="displaymonths">
+        <select class="select" id="displaymonths">
           <option value="">Disable Months</option>
           <option value="true">Enable Months</option>
        </select>
-       <select id="numberofmonths">
+       <select class="select" id="numberofmonths">
           <option value="1">0</option>
           <option value="2">1</option>
           <option value="3">2</option>
@@ -249,7 +223,7 @@
         document.write(`
         <br>
         <br>
-        <select id="format">
+        <select class="select" id="format">
         <option value="mm/dd/yy">Default - mm/dd/yy</option>
         <option value="yy-mm-dd">ISO 8601 - yy-mm-dd</option>
         <option value="d M, y">Short - d M, y</option>
@@ -264,7 +238,7 @@
         document.write(`
         <br>
         <br>
-        <select id="icontrigger">
+        <select class="select" id="icontrigger">
           <option value="">Disable Icon Trigger</option>
           <option value="true">Enable Icon Trigger</option>
        </select>`)
@@ -275,24 +249,14 @@
         document.write(`
         <br>
         <br>
-        <select id="locale">
-    <option value="ar">Arabic (&#8235;(&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
-    <option value="zh-TW">Chinese Traditional (&#32321;&#39636;&#20013;&#25991;)</option>
-    <option value="">English</option>
-    <option value="fr" selected="selected">French (Fran&ccedil;ais)</option>
-    <option value="he">Hebrew (&#8235;(&#1506;&#1489;&#1512;&#1497;&#1514;</option>
-  </select>`)
-      }
-
-      //alternate field no funciona bien 
-      if (index == 10) {
-        document.write(`
-        <br>
-        <br>
-        <select id="alternatefield">
-          <option value="">Disable AF</option>
-          <option value="true">Enable AF</option>
-       </select>`)
+        <select class="select" id="locale">
+            <option value="es" selected="selected">Spanish</option>
+            <option value="ar">Arabic (&#8235;(&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+            <option value="zh-TW">Chinese Traditional (&#32321;&#39636;&#20013;&#25991;)</option>
+            <option value="">English</option>
+            <option value="fr">French (Fran&ccedil;ais)</option>
+            <option value="he">Hebrew (&#8235;(&#1506;&#1489;&#1512;&#1497;&#1514;</option>
+        </select>`)
       }
 
       //restrict range
@@ -300,34 +264,19 @@
         document.write(`
         <br>
         <br>
-        <select id="restrictrange">
+        <select class="select" id="restrictrange">
           <option value="">Disable Restrict Range</option>
           <option value="true">Enable Restrict Range</option>
        </select>`)
       }
 
-            //date range
-            if (index == 12) {
-        document.write(`
-        <br>
-        <label for="from">From</label>
-        <input type="text" class="datepicker" id="from" name="datepicker122">
-        <label for="from">To</label>
-        <input type="text" class="datepicker" id="to" name="datepicker1222">
-
-        <br>
-        <select id="daterange">
-          <option value="">Disable Restrict Range</option>
-          <option value="true">Enable Restrict Range</option>
-       </select>`)
-      }
 
       //week of the year
       if (index == 13) {
         document.write(`
         <br>
         <br>
-        <select id="weekoftheyear">
+        <select class="select" id="weekoftheyear">
           <option value="">Disable Week of the Year</option>
           <option value="true">Enable Week of the Year</option>
        </select>`)

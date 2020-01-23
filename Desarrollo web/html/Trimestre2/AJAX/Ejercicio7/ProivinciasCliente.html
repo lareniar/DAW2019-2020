@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Documento sin título</title>
+
+</head>
+
+<script>
+    function GetProvincias(comunidad) {
+
+        console.log(comunidad)
+        var xmlhttp;
+        var contenido = "";
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange =
+
+            function ()
+
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                //mostrar comunidad
+                // console.log(xmlhttp.responseText);
+                jResp = JSON.parse(xmlhttp.responseText);
+                Provincias.innerHTML=jResp;
+                // divResultado.innerHTML=jResp[0][1];
+                for (let i = 0; i < jResp.length; i++) {
+                    if (jResp[i]["Comunidad"] == comunidad)
+                    contenido = contenido + " " + jResp[i]["Provincia"]
+                }
+                Provincias.innerHTML=contenido;
+
+            }
+console.log(contenido)
+
+        }
+
+
+        xmlhttp.open("GET", "PruebaProvincias.php");
+
+        xmlhttp.send();
+
+    }
+</script>
+
+<body>
+
+        <select onchange="GetProvincias(this.value)">
+
+                <option value="none">Elige</option>
+            
+                <option value="AND">Andalucia</option>
+            
+                <option value="ARA">Aragon</option>
+            
+                <option value="AST">Asturias</option>
+                <option value="BAL">Balear</option>
+                <option value="CAL">Castilla Leon</option>
+                <option value="CAM">Castilla la Mancha</option>
+        </select>
+    <!-- <button onclick="GetProvincias()">Provincias</button> -->
+    <div style="font-size:24px" id="Provincias"> </div>
+
+</body>
+
+</html>

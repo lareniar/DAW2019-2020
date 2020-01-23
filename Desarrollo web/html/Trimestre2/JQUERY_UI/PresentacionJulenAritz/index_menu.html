@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Selectmenu - Default functionality</title>
+
+  <link rel="stylesheet" href="../theme/jquery-ui.min.css">
+  <script src="../theme/external/jquery/jquery.js"></script>
+  <script src="../theme/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script language="JavaScript" src="Cookies.js"></script>
+
+
+
+  <style>
+    fieldset {
+      border: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .container-item {
+      display: inline-block;
+      margin: 1em;
+    }
+
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+
+    .overflow {
+      height: 200px;
+    }
+
+    td {
+      width: 300px;
+    }
+
+    h2 {
+      margin: 30px 0 0 0;
+    }
+
+    fieldset {
+      border: 0;
+    }
+
+    label {
+      display: block;
+    }
+
+    .texto {
+      font-family: 'Gelasio', serif;
+      font-style: italic;
+      display: inline-block;
+      padding: 1em;
+      max-width: 60em;
+      background: rgb(206, 222, 230);
+    }
+
+    .titulo {
+      font-family: 'Gelasio', serif;
+      font-style: italic;
+      display: inline-block;
+      padding: 1em;
+      max-width: 60em;
+      background: rgb(206, 208, 230);
+    }
+
+    /* select with custom icons */
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item-wrapper {
+      padding: 0.5em 0 0.5em 3em;
+    }
+
+    .ui-selectmenu-menu .ui-menu.customicons .ui-menu-item .ui-icon {
+      height: 24px;
+      width: 24px;
+      top: 0.1em;
+    }
+
+    .ui-icon.video {
+      background: url("images/24-video-square.png") 0 0 no-repeat;
+    }
+
+    .ui-icon.podcast {
+      background: url("images/24-podcast-square.png") 0 0 no-repeat;
+    }
+
+    .ui-icon.rss {
+      background: url("images/24-rss-square.png") 0 0 no-repeat;
+    }
+
+    /* select with CSS avatar icons */
+    option.avatar {
+      background-repeat: no-repeat !important;
+      padding-left: 20px;
+    }
+
+    .avatar .ui-icon {
+      background-position: left top;
+    }
+
+    #field_circulo {
+      border: 0;
+      margin-left: 300px;
+    }
+
+    label {
+      display: block;
+      margin: 20px 0 0 0;
+    }
+
+    #circle {
+      float: left;
+      background: yellow;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+  </style>
+
+  <script>
+    //cookies
+
+
+    $(function () {
+      $("#speed").selectmenu();
+
+      $("#files").selectmenu();
+
+      $("#number")
+        .selectmenu()
+        .selectmenu("menuWidget")
+        .addClass("overflow");
+
+      $("#fechas")
+        .selectmenu();
+
+      $("#salutation").selectmenu();
+
+      $.widget("custom.iconselectmenu", $.ui.selectmenu, {
+        _renderItem: function (ul, item) {
+          var li = $("<li>"),
+            wrapper = $("<div>", {
+              text: item.label
+            });
+
+          if (item.disabled) {
+            li.addClass("ui-state-disabled");
+          }
+
+          $("<span>", {
+              style: item.element.attr("data-style"),
+              "class": "ui-icon " + item.element.attr("data-class")
+            })
+            .appendTo(wrapper);
+
+          return li.append(wrapper).appendTo(ul);
+        }
+      });
+
+      $("#filesA")
+        .iconselectmenu()
+        .iconselectmenu("menuWidget")
+        .addClass("ui-menu-icons");
+
+      $("#filesB")
+        .iconselectmenu()
+        .iconselectmenu("menuWidget")
+        .addClass("ui-menu-icons customicons");
+
+      $("#people")
+        .iconselectmenu()
+        .iconselectmenu("menuWidget")
+        .addClass("ui-menu-icons avatar");
+
+      var circle = $("#circle");
+
+      $("#radius").selectmenu({
+        change: function (event, data) {
+          circle.css({
+            width: data.item.value,
+            height: data.item.value
+          });
+        }
+      });
+
+      $("#color").selectmenu({
+        change: function (event, data) {
+          circle.css("background", data.item.value);
+        }
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-item">
+      <div class="demo">
+        <span class="titulo">SELECCION DE PRODUCTO</span><br>
+        <form action="#">
+
+          <div id="circle"></div>
+
+          <fieldset class="field_circulo">
+            <label for="radius">Circle radius</label>
+            <select name="radius" id="radius">
+              <option value="50">50px</option>
+              <option value="100">100px</option>
+              <option value="150" selected="selected">150px</option>
+              <option value="200">200px</option>
+              <option value="250">250px</option>
+            </select>
+
+            <label for="color">Circle color</label>
+            <select name="color" id="color">
+              <option value="black">Black</option>
+              <option value="red">Red</option>
+              <option value="yellow" selected="selected">Yellow</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </fieldset>
+
+        </form><br><br><br><br><br>
+        <span class="texto">Ejemplo de como se pueden usar los selec menu para modificar el css</span>
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container-item">
+      <div class="demo">
+        <span class="titulo">FUNCIONAMIENTO PREDETERMINADO</span><br>
+        <form action="#">
+
+          <fieldset>
+            <label for="speed">Seleccionar velocidad</label>
+            <select name="speed" id="speed">
+              <option>Slower</option>
+              <option>Slow</option>
+              <option selected="selected">Medium</option>
+              <option>Fast</option>
+              <option>Faster</option>
+            </select>
+
+            <label for="files">Seleccionar un fichero</label>
+            <select name="files" id="files">
+              <optgroup label="Scripts">
+                <option value="jquery">jQuery.js</option>
+                <option value="jqueryui">ui.jQuery.js</option>
+              </optgroup>
+              <optgroup label="Other files">
+                <option value="somefile">Some unknown file</option>
+                <option value="someotherfile">Some other file with a very long option text</option>
+              </optgroup>
+            </select>
+
+            <label for="number">Seleccionar un numeros</label>
+            <select name="number" id="number">
+              <option>1</option>
+              <option selected="selected">2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+            </select>
+
+            <label for="fechas">Seleccionar fechas</label>
+            <select name="fechas" id="fechas">
+              <option>22/03/2019</option>
+              <option selected="selected">30/06/1919</option>
+
+            </select>
+
+            <label for="salutation">Seleccionar una forma abreviada</label>
+            <select name="salutation" id="salutation">
+              <option disabled selected>Por favor selecciona una</option>
+              <option>Mr.</option>
+              <option>Mrs.</option>
+              <option>Dr.</option>
+              <option>Prof.</option>
+              <option>Other</option>
+            </select>
+          </fieldset>
+
+        </form><br><br>
+        <span class="texto">Estos son ejemplos de un funcionamiento predeterminado para los select menu</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container-item">
+
+      <div class="demo">
+        <span class="titulo">RENDERIZADO PERSONALIZADO</span><br>
+        <form action="#">
+          <td>
+            <h2>Iconos del Framework</h2>
+            <fieldset>
+              <label for="filesA">Selecciona un archivo:</label>
+              <select name="filesA" id="filesA">
+                <option value="jquery" data-class="ui-icon-script">jQuery.js</option>
+                <option value="jquerylogo" data-class="ui-icon-image">jQuery Logo</option>
+                <option value="jqueryui" data-class="ui-icon-script">ui.jQuery.js</option>
+                <option value="jqueryuilogo" selected="selected" data-class="ui-icon-image">jQuery UI Logo</option>
+                <option value="somefile" disabled="disabled" data-class="ui-icon-help">Unknown file</option>
+              </select>
+            </fieldset>
+
+            <h2>Imagenes</h2>
+            <fieldset>
+              <label for="people">Selecciona una persona:</label>
+              <select name="people" id="people">
+                <option value="1" data-class="avatar"
+                  data-style="background-image: url(&apos;http://www.gravatar.com/avatar/b3e04a46e85ad3e165d66f5d927eb609?d=monsterid&amp;r=g&amp;s=16&apos;);">
+                  John Resig</option>
+                <option value="2" data-class="avatar"
+                  data-style="background-image: url(&apos;http://www.gravatar.com/avatar/e42b1e5c7cfd2be0933e696e292a4d5f?d=monsterid&amp;r=g&amp;s=16&apos;);">
+                  Tauren Mills</option>
+                <option value="3" data-class="avatar"
+                  data-style="background-image: url(&apos;http://www.gravatar.com/avatar/bdeaec11dd663f26fa58ced0eb7facc8?d=monsterid&amp;r=g&amp;s=16&apos;);">
+                  Jane Doe</option>
+              </select>
+            </fieldset>
+          </td>
+        </form><br><br><br><br>
+        <span class="texto">Ejemplos de personalizacion de iconos</span>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    var select = document.getElementById("fechas");
+    select.options[select.options.length] = new Option(consultarCookie("Fecha"));
+  </script>
+</body>
+
+</html>
+<!--
+  INFORMACION DE LA API PARA INTRODUCIR ALGO EN UN MENU
+
+  appendTo 
+    Tipo: Selector
+    Defecto: null
+    A qué elemento agregar el menú. Cuando es null, se comprueba el nombre de clase de los padres. Si se encuentra un elemento con el ui-frontnombre de la clase, el menú se agrega a ese elemento, sino el menú se agrega al cuerpo.
+    
+    Ejemplos de código:
+
+    $( ".selector" ).selectmenu({
+        appendTo: "#someElem"
+    });
+
+-->

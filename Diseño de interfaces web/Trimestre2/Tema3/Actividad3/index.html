@@ -7,6 +7,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    <style>
+        #play {
+            background-image: url('resources/play.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #pause {
+            background-image: url('resources/stop.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #forward {
+            background-image: url('resources/forward.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #backward {
+            background-image: url('resources/rewind.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #volumeup {
+            background-image: url('resources/volumeup.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        #volumelow {
+            background-image: url('resources/volumelow.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+        }
+
+        .content {
+            position: relative;
+            align-content: right;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,38 +65,80 @@
         </div>
     </header>
 
+    <button id="backward" onclick="prevVideo()" type="button"></button>
+    <button id="play" onclick="playVid()" type="button"></button>
+    <button id="pause" onclick="pauseVid()" type="button"></button>
+    <button id="forward" onclick="nextVid()" type="button"></button>
+    <button id="volumeup" onclick="document.getElementById('myVideo').volume+=0.1"></button>
+    <button id="volumelow" onclick="document.getElementById('myVideo').volume-=0.1"></button><br>
+    
+    <p id="formato">Video en mp4<p id="navegador"></p></p>
+    <p id="error"></p>
+    <video id="myVideo" >
+        <source src="resources/2.flv">
+        Formato no soportado en <p id="navegador"></p>
+    </video><br>
 
-    <button onclick="playVid()" type="button">Play Video</button>
-    <button onclick="pauseVid()" type="button">Pause Video</button>
-    <button onclick="nextVid()" type="button">Next Video</button><br>
+    <p>Video de youtube</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SAjs3SdwTAk" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 
-    <video id="myVideo" width="320" height="176">
-        <source src="resources/1.mp4" type="video/mp4">
-        No soportado
-    </video>
-
+    <iframe src="https://player.vimeo.com/video/23608259?color=ee2f24&title=0&byline=0&portrait=0" width="640"
+        height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/23608259">Cats in Tanks</a> from <a href="https://vimeo.com/whitehousepost">Whitehouse
+            Post</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
     <script>
+        
+
+    
         var vid = document.getElementById("myVideo");
         var source = document.getElementsByTagName("source");
-        var videos = ["1.mp4", "2.flv",
-            "3.ogg",
-            "4.webm"
-        ]
+        var formatos = ["mp4", "flv", "ogv", "webm", "640x360 - webm"]
+        var videos = ["1.mp4", "2.flv","3.ogv","4.webm", "4630.webm"]
         var contador = 0;
         vid.src = "resources/" + videos[contador];
 
         function playVid() {
-            vid.play();
+            try{
+                vid.play();
+            }catch{
+                document.getElementById("error").innerHTML = "Video en " + formatos[contador]
+            }
         }
+
         function pauseVid() {
             vid.pause();
         }
+
         function nextVid() {
             contador++;
             if (contador == videos.length)
                 contador = 0;
-
             vid.src = "resources/" + videos[contador];
+            playVid();
+            
+            document.getElementById("formato").innerHTML = "Video en " + formatos[contador]
+            document.getElementById("navegador").innerHTML = "" + obtenerIdNavegador();
+        }
+
+        function prevVideo() {
+            contador--;
+            if (contador < 0)
+                contador = videos.length - 1;
+            vid.src = "resources/" + videos[contador];
+            document.getElementById("formato").innerHTML = "Video en " + formatos[contador]
+            document.getElementById("navegador").innerHTML = obtenerIdNavegador();
+        }
+
+        function obtenerIdNavegador() {
+            var
+                aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
+                sUsrAg = navigator.userAgent,
+                nIdx = aKeys.length - 1;
+
+            for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+
+            return aKeys[nIdx]
         }
     </script>
 

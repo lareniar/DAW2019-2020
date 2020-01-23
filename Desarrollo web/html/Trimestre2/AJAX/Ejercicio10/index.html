@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Documento sin título</title>
+
+    <style>
+    table, td, tr{
+        border: 1px solid rgb(121, 228, 144);
+    }
+        </style>
+</head>
+
+<script>
+    function GetTiempo() {
+        var xmlhttp;
+        var tabla = "";
+        console.log("interval")
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange =
+
+            function ()
+
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                jResp = JSON.parse(xmlhttp.responseText);
+                console.log(jResp);
+                tabla += '<table>'
+                for (let i = 0; i < jResp.length; i++) {
+                    tabla += `<tr> 
+                                <td>${jResp[i]["Ciudad"]}</td>
+                                <td><img src="resources/${jResp[i]["Estado"]}.gif" alt="${jResp[i]["Estado"]}"></td>
+                                </tr>`;
+                        
+                    };
+                    
+                tabla += '</table></tr>'
+                // document.body.appendChild(tabla);
+                document.body.innerHTML = " ";
+                document.body.innerHTML += tabla;
+
+            }
+
+        }
+        
+        xmlhttp.open("GET", "servicios.php");
+
+        xmlhttp.send();
+        setTimeout(GetTiempo, 4000)
+    }
+</script>
+
+<body>
+    
+    <script>GetTiempo()</script>
+<p>Aa</p>
+</body>
+
+</html>

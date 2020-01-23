@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function EnviarVotos(votos, partido) {
+            console.log(partido)
+            var xmlhttp;
+            var iConcejales = 20;
+            xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange =
+
+                function ()
+
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                   
+                    document.div.innerHTML(xmlhttp.responseText)
+                }
+
+            }
+
+            xmlhttp.open("GET", "votos.php?partido=" + partido + "&" + "votos=" + votos);
+
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Simulacion de votos</p>
+    <p>Elige un partido</p>
+    <select id="partido">
+
+        <option value="EAJ-PNV">EAJ-PNV</option>
+        <option value="IU">IU</option>
+        <option value="BILDU">BILDU</option>
+        <option value="PSOE">PSOE</option>
+        <option value="PP">PP</option>
+    </select>
+
+    <p>Cantidad de votos</p>
+    <input type="text" id="votos">
+    <button
+        onclick="EnviarVotos(document.getElementById('votos').value, document.getElementById('partido').value)">Enviar
+        Votos</button>
+
+        <div id="texto"></div>
+</body>
+
+</html>
