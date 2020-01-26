@@ -28,6 +28,14 @@
   }
 
   $(document).ready(function(){
+    //MENU SUPERIOR DE PÁGINAS (cambio de color)
+    aColor=["red","blue","green","yellow","orange"]// array de colores para los background
+    // menú superior
+    $( ".headerLinks" ).children().hover(function(){
+      $(this).children().slideToggle(500).css("background-color",aColor[$(this).children().attr('id')]);
+    });
+
+
     //seccion historia ...
     $("#tabs").tabs({
         collapsible: true,
@@ -39,13 +47,6 @@
         $(this).css("background-color","rgba(0, 0, 0, 0.452)");
     });
     
-    aColor=["red","blue","green","yellow","orange"]// array de colores para los background
-    // menú superior
-    $( ".headerLinks" ).children().hover(function(){
-        $(this).children().slideToggle(500).css("background-color",aColor[$(this).children().attr('id')]);
-
-    });
-
     //seccion turismo
     $(".gridItem").hover(function(){
       $(this).children().children(".divTexto").slideToggle(1000);
@@ -63,6 +64,20 @@
       $("#gridActividades").slideUp(1000);
       $("#gridServicios").slideToggle(1000)
     });
+
+
+    /* SOBRE NOSOTROS */
+    //img seleccion de la galeria
+    $("#divImgSelect").hide();
+    $(".imgGaleria").click(function(){
+      $("#imgSelect").attr("src",$(this).attr('src'));
+      $("#divImgSelect").fadeIn();
+    });
+    $("#exit").click(function(){
+      $("#divImgSelect").fadeOut();
+    })
+   
+
   })
 
  

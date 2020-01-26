@@ -9,11 +9,13 @@
 /* HEADER CONTENT */
 body { 
     padding-top: 5em;
+    background-image: url("https://assets.website-files.com/5bfd1275cc56e15ce750b18e/5c289afb9a1575cb2f893a3b_15.%20Perfume.jpg");
 }
 
 .navbar {
     height: 3em;
     background-color: #7A6F9B;
+    background-repeat: no-repeat;
     
 }
 .nav-link{
@@ -46,8 +48,6 @@ i {
     margin-bottom: 2px;
   }
 
-/*BODY CONTENT*/
-body { background: var(--background-color) !important; }
 img {
     width: 100%;
 }

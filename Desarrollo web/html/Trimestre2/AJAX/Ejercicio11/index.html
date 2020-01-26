@@ -9,16 +9,19 @@
     <title>Documento sin título</title>
 
     <style>
-    table, td, tr{
-        border: 4px solid rgb(0, 68, 131);
-        border-collapse: collapse;
-        margin: 10px;
-        padding: 1em;
-    }
-    img{
-        height: 65px;
-    }
-        </style>
+        table,
+        td,
+        tr {
+            border: 4px solid rgb(0, 68, 131);
+            border-collapse: collapse;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        img {
+            height: 65px;
+        }
+    </style>
 </head>
 
 <script>
@@ -31,25 +34,50 @@
 
         {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                console.log(JSON.parse(xmlhttp.responseText))
+                jResponse = JSON.parse(xmlhttp.responseText)
                 document.body.innerHTML = " ";
-                document.body.innerHTML = JSON.parse(xmlhttp.responseText);
+                tabla = '<table><td>Pais</td><td>Medallas</td>';
+
+                for (let i = 0; i < jResponse.length; i++) {
+
+                    tabla += `<tr><td>${jResponse[i]["Pais"]}</td>`;
+                    tabla +=`<td>`;
+                    
+                    for (let oro = 0; oro < jResponse[i]["Oro"]; oro++) {
+                        tabla += `<img src="Medallas/1.gif" alt="oro">`
+                    }
+                    for (let plata = 0; plata < jResponse[i]["Plata"]; plata++) {
+                        tabla += `<img src="Medallas/2.gif" alt="oro">`
+                    }
+                    for (let bronce = 0; bronce < jResponse[i]["Bronce"]; bronce++) {
+                        console.log(jResponse[i]["Bronce"])
+                        tabla += `<img src="Medallas/3.gif" alt="oro">`
+                    }
+                    tabla +=`</td>`;
+                }
+
+                tabla += "</table>";
+
+                document.body.innerHTML = tabla;
 
             }
 
         }
-        
+
         xmlhttp.open("GET", "medallero.php");
 
         xmlhttp.send();
-        setTimeout(GetMedalla, 15000)
+        setTimeout(GetMedalla, 5000)
     }
 </script>
 
 <body>
+
+    <script>
+        GetMedalla();
     
-    <script>GetMedalla()</script>
-<p>ee</p>
+    </script>
+    <p>ee</p>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ img{
     width: 100%;
 }
 body{
-    margin: 0;
+    margin: auto;
 }
 a, a:focus, a:active a:visited {
     text-decoration:none;
@@ -43,16 +43,14 @@ a:hover {
     z-index: 999;
     box-shadow: 0px 5px 6px black;
 margin-bottom: 140px;
-    
-    background: rgba(255,255,255,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
-
+background: rgba(32,136,167,1);
+background: -moz-linear-gradient(top, rgba(32,136,167,1) 0%, rgba(255,255,255,0.94) 93%, rgba(255,255,255,0.94) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,136,167,1)), color-stop(93%, rgba(255,255,255,0.94)), color-stop(100%, rgba(255,255,255,0.94)));
+background: -webkit-linear-gradient(top, rgba(32,136,167,1) 0%, rgba(255,255,255,0.94) 93%, rgba(255,255,255,0.94) 100%);
+background: -o-linear-gradient(top, rgba(32,136,167,1) 0%, rgba(255,255,255,0.94) 93%, rgba(255,255,255,0.94) 100%);
+background: -ms-linear-gradient(top, rgba(32,136,167,1) 0%, rgba(255,255,255,0.94) 93%, rgba(255,255,255,0.94) 100%);
+background: linear-gradient(to bottom, rgba(32,136,167,1) 0%, rgba(255,255,255,0.94) 93%, rgba(255,255,255,0.94) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2088a7', endColorstr='#ffffff', GradientType=0 );
 }
 
 .headerLogo{
@@ -130,6 +128,7 @@ margin-bottom: 140px;
   /* container de las imagnes del carrusel*/
   .AlbarracinPortada{
     position: relative;
+    overflow: hidden;
     width: 100%;
     height: 800px;
   }
@@ -241,6 +240,97 @@ margin-bottom: 140px;
         color:white;
     }
 
+
+
+    /********************* HTML TURISMO *********************/
+
+/********************* FIN HTML TURISMO *********************/
+
+/********************* HTML NOSOTROS *********************/
+/*fondo color*/
+#bodyNosotros{
+    background-image: linear-gradient(315deg, #fcc3a5 1%, #fffaeb 86%);
+    
+}
+/* GALERIA DE FOTOS */
+.galeria{/*zona de la galeria*/
+    width: 80%;
+    margin-bottom: 20px;
+    position: relative;
+}
+#fotos img {
+    width: 100% ;
+    height: auto;
+    object-fit: cover;
+    padding: 15px;
+    transition: 1s;
+}
+#fotos img:hover{
+    transform: scale(1.1);/* agrandamiento de la imagen*/
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.75);/*el shadow*/
+}
+
+#fotos{ /*EL GRID */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    column-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/*imagenes verticales que ocupen dons lineas*/
+.vertical{
+    grid-row: span 2;
+}
+/*para meter imagenes que ocumen el doble*/
+.grande{
+    grid-row: span 2;
+    grid-column: span 2;;
+}
+
+h2{
+    position: relative;
+}
+#imgIzquierda{/*las imágenes que acompañan al texto en el lado izquierdo*/
+    float: left;
+    margin:1%;
+}
+#imgDerecha{/*las imágenes que acompañan al texto en el lado derecho*/
+    float: right;
+    margin:1%;
+}
+.textos{
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+    border-bottom: 2px solid var(--header-separator-color);
+}
+#general{
+    margin-top: 5%;
+}
+/*div e imagenes que se muestran al clicar una img de la galeria*/
+#divImgSelect{
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.788);
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#exit{
+    width: 50px;
+    position: absolute;
+    right: 2%;
+    margin-top:2%;
+}
+#imgSelect{
+    width: 50%;
+    margin: 10%;
+}
+/* fin div img*/
+/********************* FIN HTML NOSOTROS *********************/
+    /********************* HTML CONTACTO *********************/
     /*contacto*/
     .contacto{
         margin-left: 40%;
@@ -253,25 +343,38 @@ margin-bottom: 140px;
         border-bottom: 2px solid rgb(172, 172, 172);
         xbackground-color: rgb(252, 220, 41);
     }
-
-
+/********************* FIN HTML CONTACTO *********************/
   /*footer*/
   .footer{
     display:flex;
-    margin: 0;
-    
-    height: 8em;
+    align-items: center;
+    justify-content: center;
 
     background: rgba(255,255,255,1);
-    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgb(224, 221, 34) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(224, 221, 34)));
-    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
-    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
-    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
-    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(224, 221, 34) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#1b939e', GradientType=1 );
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,199,87,0.94) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,199,87,0.94)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,199,87,0.94) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,199,87,0.94) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,199,87,0.94) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,199,87,0.94) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc757', GradientType=0 );
     
 }
+
+.footerflex{
+    padding: 1em 8em 5em 5em;
+   
+}
+
+.footericon{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    top: 0.4em;
+    margin-right: 1em;
+}
+
+
 
 
 /* MEDIA */

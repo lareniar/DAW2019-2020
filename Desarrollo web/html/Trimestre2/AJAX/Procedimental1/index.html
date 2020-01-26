@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+
+    <title>Documento sin título</title>
+
+    <style>
+        table,
+        td,
+        tr {
+            border: 4px solid rgb(0, 68, 131);
+            border-collapse: collapse;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        img {
+            height: 65px;
+        }
+    </style>
+</head>
+
+<script>
+    var tabla= "";
+    $(document).ready(function(){
+        $.ajax({
+        url:   'partidos.php',
+        type:  'GET',
+        beforeSend: function () {
+        //
+       },
+       success: function (response) {
+           
+           jResponse = JSON.parse(response)
+           for (let i = 0; i < jResponse.length; i++) {
+              tabla += `<tr><td>${jResponse[i]["EquipoCasa"]}
+                <td >${jResponse[i]["EquipoFuera"]}</td>
+                <td><p>
+                    <span id="golescasa${i}">${jResponse[i]["GolesCasa"]}</span> - 
+                    <span id="golesfuera${i}">${jResponse[i]["GolesFuera"]}</p>
+                </td></tr>`
+           }
+        $("div").append(tabla);
+        alert("aaa" + jQuery.type($("#golescasa"+1).text()))
+        // VerificarGol();
+       }
+    });
+    
+    function VerificarGol(){
+        for (let i = 0; i < jResponse.length; i++) {
+            golescasa = $("#golescasa"+i).text()
+            golesfuera = $("#golesfuera"+i).text()
+
+            if(golescasa != jResponse[i]["GolesCasa"] || golesfuera !=jResponse[i]["GolesFuera"]){
+                
+                $("#golescasa"+i).vale = 
+                $("#golescasa"+i).css.background("color", "red")
+            }
+                
+            
+        }
+    }
+    
+});
+</script>
+
+
+<body>
+
+    <div></div>
+</body>
+
+</html>

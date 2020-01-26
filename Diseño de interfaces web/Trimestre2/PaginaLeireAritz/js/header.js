@@ -8,7 +8,7 @@ document.write(`
                 <a href="index.html">Inicio <div id='0' class="portada"></div> </a>
                 <a href="nosotros.html">Nosotros <div id='1' class="portada"></div> </a>
                 <a href="turismo.html"> Turismo <div id='2' class="portada"></div> </a>
-                <a href="contactos.html"> Alrededores <div id='3' class="portada"></div> </a>
+                <a href="alrededores.html"> Alrededores <div id='3' class="portada"></div> </a>
                 <a href="contacto.html"> Contacto <div id='4' class="portada"></div> </a>
             </div>
     </div>

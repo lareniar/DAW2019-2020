@@ -22,7 +22,7 @@ if ($link->connect_error) {
 
 
 
-$sql = "SELECT * from medallero ORDER BY oro desc ";
+$sql = "SELECT * from Partidos";
 
 
 
@@ -37,7 +37,7 @@ for ($i=0;$i<$filas;$i++){
 
     $fila = mysqli_fetch_array($resultado);
     
-    $miArray[$i]= array("Pais"=>utf8_encode($fila["Pais"]),"Oro"=>$fila["Oro"],"Plata"=>$fila["Plata"],"Bronce"=>$fila["Bronce"]);
+    $miArray[$i]= array("EquipoCasa"=>utf8_encode($fila["EquipoCasa"]), "EquipoFuera"=>utf8_encode($fila["EquipoFuera"]), "GolesCasa"=>$fila["GolesCasa"], "GolesFuera"=>$fila["GolesFuera"]);
 
 
 };
@@ -47,7 +47,3 @@ echo  json_encode($miArray);
  
 
 mysqli_close($link);
-
- 
-
-?>
