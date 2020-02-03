@@ -1,3 +1,5 @@
+ 
+
 <meta charset = "utf-8"/>
 
 
@@ -9,10 +11,10 @@ $pais[0]="spain"; $pais[1]="mexico"; $pais[2]="argentina"; $pais[3]="colombia";
 
 
 
-$ciudad[0][0]="Madrid"; $ciudad[0][1]="Barcelona"; $ciudad[0][2]="Valencia"; $ciudad[0][3]="Sevilla";
+$ciudad[0][0]="Madrid"; $ciudad[0][1]="Barcelona"; $ciudad[0][2]="Valencia"; $ciudad[0][3]="Sevilla"; 
 
 
-$ciudad[0][4]="Zaragoza"; $ciudad[0][5]="Málaga"; $ciudad[0][6]="Murcia";
+$ciudad[0][4]="Zaragoza"; $ciudad[0][5]="Málaga"; $ciudad[0][6]="Murcia";$ciudad[0][7]="Irun";
 
 
 $ciudad[1][0]="México D.F."; $ciudad[1][1]="Ecatepec"; $ciudad[1][2]="Guadalajara"; $ciudad[1][3]="Puebla";
@@ -32,7 +34,7 @@ $ciudad[3][0]="Bogotá"; $ciudad[3][1]="Medellín"; $ciudad[3][2]="Cali"; $ciuda
 
 $ciudad[3][4]="Cartagena"; $ciudad[3][5]="Cúcuta"; $ciudad[3][6]="Soledad"; $ciudad[3][7]="Ibagué";
 
-$enlaces = ["www.irun.org"];
+
 
 // Rescatamos el parámetro pais que nos llega mediante la url que invoca xmlhttp
 
@@ -62,14 +64,28 @@ $ciudadesRespuesta = "";
 
 for ($i = 0; $i<count($ciudad[$indicePais]) ; $i++) {
 
-
-    $ciudadesRespuesta .= ",".$ciudad[$indicePais][$i];
-
-
+    if($i%2==0)
+        $ciudadesRespuesta .= ",".$ciudad[$indicePais][$i];
+    else{
+        if($ciudad[$indicePais][$i-1]=="León"){
+            $ciudadesRespuesta .= ","."https://es.wikipedia.org/wiki/León_(México)";
+        }
+        else if($ciudad[$indicePais][$i-1]=="Ciudad de Salta"){
+            $ciudadesRespuesta .= ","."https://es.wikipedia.org/wiki/Salta";
+        }else{
+            $ciudadesRespuesta .= ","."https://es.wikipedia.org/wiki/".$ciudad[$indicePais][$i-1];
+        }
+    }
 }
 
+//links
+//$links="";
+/*for($i=0;$i<count($pais);$i++){
+	$links.=","."https://es.wikipedia.org/wiki/".$ciudad[$i][0];
+}*/
+//$links.=","."https://es.wikipedia.org/wiki/".$ciudad[$indicePais][0];
 
-echo $msg.$ciudadesRespuesta."\",".$enlaces[0];
+echo $msg.$ciudadesRespuesta;
 
 
 ?>

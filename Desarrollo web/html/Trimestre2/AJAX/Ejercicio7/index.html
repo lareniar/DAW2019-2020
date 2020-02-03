@@ -26,6 +26,7 @@
                 //mostrar comunidad
                 // console.log(xmlhttp.responseText);
                 jResp = JSON.parse(xmlhttp.responseText);
+                console.log(jResp)
                 Provincias.innerHTML=jResp;
                 // divResultado.innerHTML=jResp[0][1];
                 for (let i = 0; i < jResp.length; i++) {
@@ -35,12 +36,12 @@
                 Provincias.innerHTML=contenido;
 
             }
-console.log(contenido)
+
 
         }
 
 
-        xmlhttp.open("GET", "PruebaProvincias.php");
+        xmlhttp.open("GET", "PruebaProvincias.php?provincia="+comunidad);
 
         xmlhttp.send();
 

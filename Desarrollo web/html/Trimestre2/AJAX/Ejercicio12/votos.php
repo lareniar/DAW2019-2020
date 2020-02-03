@@ -25,7 +25,7 @@ if ($link->connect_error) {
 
 
 
-$sql = "UPDATE elecciones SET Votos = '$Votos' WHERE Partido = '$Partido'";
+$sql = "UPDATE elecciones SET Votos = '$Votos' WHERE Partidos = '$Partido'";
 
 
 

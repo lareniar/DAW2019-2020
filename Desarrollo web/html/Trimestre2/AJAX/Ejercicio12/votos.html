@@ -21,10 +21,11 @@
             {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                    
-                    document.div.innerHTML(xmlhttp.responseText)
+                    
                 }
 
             }
+            console.log(votos)
 
             xmlhttp.open("GET", "votos.php?partido=" + partido + "&" + "votos=" + votos);
 

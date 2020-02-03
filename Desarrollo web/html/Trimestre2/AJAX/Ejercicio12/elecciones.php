@@ -39,7 +39,7 @@ for ($i=0;$i<$filas;$i++){
 
     $fila = mysqli_fetch_array($resultado);
     
-    $miArray[$i]= array("Partido"=>utf8_encode($fila["Partido"]),"Votos"=>$fila["Votos"]);
+    $miArray[$i]= array("Partidos"=>utf8_encode($fila["Partidos"]),"Votos"=>$fila["Votos"]);
 
 
 };

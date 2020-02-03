@@ -21,24 +21,21 @@ if ($link->connect_error) {
 // Consulta
 
 
+$provincia=$_REQUEST["provincia"]; 
+$sql = "SELECT * from Provincias WHERE Comunidad='$provincia'";
 
-$sql = "SELECT * from Provincias WHERE Comunidad='CAM'";
 
 
- 
 
 $resultado = $link->query($sql); 
-
  
 
 $filas=$resultado->num_rows;
-
  
 
 for ($i=0;$i<$filas;$i++){
 
     $fila = mysqli_fetch_array($resultado);
-
     $miArray[$i]= array("Provincia"=>utf8_encode($fila["Provincia"]),"Extension"=>$fila["Extension"], "Comunidad"=>$fila["Comunidad"]);
 
 }

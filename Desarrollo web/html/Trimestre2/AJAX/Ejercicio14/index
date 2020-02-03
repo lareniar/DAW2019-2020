@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Documento sin título</title>
+
+    <style>
+        table,
+        td,
+        tr {
+            border: 4px solid rgb(0, 68, 131);
+            border-collapse: collapse;
+            margin: 10px;
+            padding: 1em;
+        }
+
+        img {
+            height: 65px;
+        }
+    </style>
+</head>
+
+<script>
+    
+    
+    function GetData() {
+        var xmlhttp;
+        var div = document.getElementById("tabla")
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange =
+
+            function ()
+
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                div.innerHTML = " ";
+                jResponse = JSON.parse(xmlhttp.responseText)
+                console.log(jResponse)
+
+                tabla = '<table class="tabla"><td>Hitza</td><td>Palabra</td><td>Word</td><td>Parole</td>'
+
+                for (let i = 0; i < jResponse.length; i++) {
+
+                    tabla += `<tr><td>${jResponse[i]["Hitza"]}</td>`
+                    tabla += `<td>${jResponse[i]["Palabra"]}</td>`
+                    tabla += `<td>${jResponse[i]["Word"]}</td>`
+                    tabla += `<td>${jResponse[i]["Parole"]}</td></tr>`
+
+
+                }
+                tabla += "</table>"
+                div.innerHTML = tabla;
+            }
+
+
+
+        }
+
+
+        //crear array palabras
+        var palabras = new Object();
+        palabras.hitza = document.getElementById("euskera").value;
+        palabras.palabra  = document.getElementById("castellano").value;
+        palabras.word = document.getElementById("ingles").value;
+        palabras.parole = document.getElementById("frances").value;
+        xmlhttp.open("GET", "palabras.php?palabras=" + palabras);
+
+        xmlhttp.send();
+    
+
+
+    }
+</script>
+
+<body>
+<div id="tabla">
+
+</div>
+<div>
+    <input type="text" name="" id="euskera" value="e"> <br>
+    <input type="text" name="" id="castellano" value="f" > <br>
+    <input type="text" name="" id="ingles" value="g"> <br>
+    <input type="text" name="" id="frances" value="h"> <br>
+    <button onclick="GetData()">GetData</button>
+
+</div>
+
+</body>
+
+</html>

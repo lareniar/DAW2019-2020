@@ -1,3 +1,5 @@
+ 
+
 <!DOCTYPE html><html><head><title></title><meta charset="utf-8">
 
 
@@ -53,18 +55,20 @@
   
     if (xmlhttp.readyState==4 && xmlhttp.status==200) {
   
-      
+  
       contenidosRecibidos = xmlhttp.responseText.split(",");
-      console.log(contenidosRecibidos)
+  
   
       document.getElementById("txtInformacion").innerHTML=contenidosRecibidos[0];
   
-  
+  link=contenidosRecibidos.length;
+  console.log(contenidosRecibidos);
    for (var i=1; i<contenidosRecibidos.length;i++) {
   
-  
-      contenidosAMostrar = contenidosAMostrar+'<div id="ciudades'+i+'"> <a href="'+ contenidosRecibidos[contenidosRecibidos.length-1] +'">' + contenidosRecibidos[i]+ '</a></div>';
-  
+      if(i%2!=0){
+         contenidosAMostrar = contenidosAMostrar+'<div id="ciudades'+i+'"> <a href="'+contenidosRecibidos[i+1]+'">' + contenidosRecibidos[i]+ '</a></div>';
+      }
+      
   
    }
   
@@ -79,7 +83,7 @@
   
   
   
-  xmlhttp.open("GET","servidor.php?pais="+str);
+  xmlhttp.open("GET","ejemplo2servidor.php?pais="+str);
   
   
   xmlhttp.send();

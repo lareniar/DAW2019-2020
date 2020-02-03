@@ -1,0 +1,58 @@
+<?php
+
+ 
+
+$servername = "10.10.17.1";
+
+$username = "aritz";
+
+$password = "aritz";
+
+// Conexión a la base de datos:
+
+$link = @new mysqli($servername, "aritz", "aritz", "aritz");
+
+if ($link->connect_error) {
+
+    die('Connect Error: ' . $link->connect_error);
+
+}
+
+
+
+// UPDATE
+$Elemento=$_REQUEST["palabras"]; 
+$sql = "UPDATE palabras SET Hitza = $Elemento['hitza'][0], Palabra = $Elemento['palabra'][0], Word = $Elemento['word'][0], Parole = $Elemento['parole'][0]";
+query($sql);
+// Consulta
+
+
+$sql = "SELECT * from palabras";
+
+
+
+
+$resultado = $link->query($sql); 
+
+ 
+
+$filas=$resultado->num_rows;
+
+for ($i=0;$i<$filas;$i++){
+
+    $fila = mysqli_fetch_array($resultado);
+    
+    $miArray[$i]= array("Hitza"=>utf8_encode($fila["Hitza"]),
+    "Palabra"=>utf8_encode($fila["Palabra"]),
+    "Word"=>utf8_encode($fila["Word"]),
+    "Parole"=>utf8_encode($fila["Parole"]),);
+
+
+};
+
+echo  json_encode($miArray);
+echo $Elemento;
+
+ 
+
+mysqli_close($link);

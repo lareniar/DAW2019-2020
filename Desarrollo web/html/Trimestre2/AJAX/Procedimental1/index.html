@@ -25,47 +25,75 @@
 </head>
 
 <script>
-    var tabla= "";
-    $(document).ready(function(){
-        $.ajax({
-        url:   'partidos.php',
-        type:  'GET',
-        beforeSend: function () {
-        //
-       },
-       success: function (response) {
-           
-           jResponse = JSON.parse(response)
-           for (let i = 0; i < jResponse.length; i++) {
-              tabla += `<tr><td>${jResponse[i]["EquipoCasa"]}
+    var tabla = "";
+    $(document).ready(function () {
+        getajax()
+
+        function getajax() {
+
+            $.ajax({
+                url: 'partidos.php',
+                type: 'GET',
+                beforeSend: function () {
+                    //
+                },
+                success: function (response) {
+
+                    jResponse = JSON.parse(response)
+                    for (let i = 0; i < jResponse.length; i++) {
+                        tabla += `<tr><td>${jResponse[i]["EquipoCasa"]}
                 <td >${jResponse[i]["EquipoFuera"]}</td>
-                <td><p>
+                <td class="gol${i}"><p class>
                     <span id="golescasa${i}">${jResponse[i]["GolesCasa"]}</span> - 
                     <span id="golesfuera${i}">${jResponse[i]["GolesFuera"]}</p>
                 </td></tr>`
-           }
-        $("div").append(tabla);
-        alert("aaa" + jQuery.type($("#golescasa"+1).text()))
-        // VerificarGol();
-       }
-    });
-    
-    function VerificarGol(){
-        for (let i = 0; i < jResponse.length; i++) {
-            golescasa = $("#golescasa"+i).text()
-            golesfuera = $("#golesfuera"+i).text()
+                    }
+                    $("div").append(tabla);
 
-            if(golescasa != jResponse[i]["GolesCasa"] || golesfuera !=jResponse[i]["GolesFuera"]){
-                
-                $("#golescasa"+i).vale = 
-                $("#golescasa"+i).css.background("color", "red")
-            }
-                
-            
+                    setInterval(VerificarGol, 10000)
+                    //VerificarGol();
+                }
+            });
         }
-    }
-    
-});
+
+
+        function VerificarGol() {
+
+            $.ajax({
+                url: 'partidos.php',
+                type: 'GET',
+                beforeSend: function () {
+                    //
+                },
+                success: function (response) {
+
+                    console.log("verifiacar")
+
+                    jResponse = JSON.parse(response)
+                    for (let i = 0; i < jResponse.length; i++) {
+                        golescasa = $("#golescasa" + i).text()
+                        golesfuera = $("#golesfuera" + i).text()
+
+                        if (golescasa != jResponse[i]["GolesCasa"] || golesfuera != jResponse[i][
+                                "GolesFuera"
+                            ]) {
+                            console.log("gol")
+                            $(`.gol${i}`).css("background-color", "red");
+                            $(`#golescasa${i}`).text(jResponse[i]["GolesCasa"]);
+                            $(`#golesfuera${i}`).text(jResponse[i]["GolesFuera"]);
+                            setTimeout(function () {
+                                $(`.gol${i}`).css("background-color", "white")
+                            }, 2000);
+
+                        }
+                    }
+                    //VerificarGol();
+                }
+            });
+
+        }
+
+    });
 </script>
 
 
